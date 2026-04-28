@@ -30,11 +30,9 @@
 <link rel="canonical" href="https://escola-da-fe-nu.vercel.app">
 
 <!-- TODO: Google Analytics 4 -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
-
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
 <!-- TODO: Meta Pixel -->
-<!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','PIXEL_ID_AQUI');fbq('track','PageView');</script> -->
+<!-- <script>!function(f,b,e,v,n,t,s)...</script> -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,7 +124,8 @@ h1 em{font-style:normal;color:var(--gold);display:block}
 .hcard-body{padding:22px 28px}
 .hfeat{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
 .hfeat:last-child{border-bottom:none}
-.hfeat-ic{width:32px;height:32px;background:rgba(197,151,63,.1);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.hfeat-ic{width:32px;height:32px;background:rgba(197,151,63,.08);border:1px solid rgba(197,151,63,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold)}
+.hfeat-ic svg{display:block}
 .hfeat-t strong{display:block;font-size:.8rem;color:var(--white);font-weight:600}
 .hfeat-t span{font-size:.72rem;color:var(--muted)}
 .hprice{margin-top:18px;background:rgba(197,151,63,.06);border:1px solid rgba(197,151,63,.2);padding:18px;text-align:center}
@@ -159,13 +158,12 @@ section{padding:96px 48px}
 /* ── DOR ── */
 .dor{background:var(--dark2)}
 .dor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:52px;background:var(--border)}
-.pain{background:var(--dark2);padding:36px 30px;position:relative;overflow:hidden;transition:.25s}
+.pain{background:var(--dark2);padding:40px 32px;position:relative;overflow:hidden;transition:.25s}
 .pain::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:.3s;transform-origin:left}
 .pain:hover::before{transform:scaleX(1)}
 .pain:hover{background:var(--dark3)}
-.pain-num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:rgba(197,151,63,.12);line-height:1;position:absolute;top:16px;right:20px;letter-spacing:.03em}
-.pain-em{font-size:1.8rem;margin-bottom:16px;display:block}
-.pain h3{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;margin-bottom:10px;color:var(--white)}
+.pain-num{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(197,151,63,.07);line-height:1;position:absolute;top:12px;right:16px;letter-spacing:.03em;pointer-events:none}
+.pain h3{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.04em;margin-bottom:12px;color:var(--white)}
 .pain p{font-size:.86rem;line-height:1.75;color:var(--muted)}
 
 /* ── SOLUÇÃO ── */
@@ -174,10 +172,11 @@ section{padding:96px 48px}
 .chk{list-style:none;margin-top:28px}
 .chk li{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid var(--border);font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6}
 .chk li:last-child{border-bottom:none}
-.chk-ic{width:18px;height:18px;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:.6rem;color:var(--green);font-weight:700}
+.chk-ic{width:18px;height:18px;background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;color:var(--green)}
+.chk-ic svg{display:block}
 .quote-box{background:linear-gradient(145deg,#0e1828,#162240);padding:48px;position:relative;overflow:hidden;border:1px solid rgba(197,151,63,.15)}
 .quote-box::before{content:'';position:absolute;top:0;left:0;width:2px;height:100%;background:linear-gradient(180deg,var(--gold),transparent)}
-.quote-mark{font-family:'Playfair Display',serif;font-size:8rem;color:rgba(255,255,255,.04);position:absolute;top:-16px;left:24px;line-height:1}
+.quote-mark{font-family:'Playfair Display',serif;font-size:8rem;color:rgba(255,255,255,.04);position:absolute;top:-16px;left:24px;line-height:1;user-select:none}
 .quote-txt{font-family:'Playfair Display',serif;font-size:1.2rem;font-style:italic;line-height:1.8;color:rgba(255,255,255,.85);margin-bottom:32px;position:relative;z-index:1;padding-top:40px}
 .quote-au{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
 .au-av{width:48px;height:48px;background:linear-gradient(135deg,#0e1828,#162240);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--gold);letter-spacing:.05em;flex-shrink:0}
@@ -187,36 +186,42 @@ section{padding:96px 48px}
 /* ── PARA QUEM ── */
 .pquem{background:var(--dark2)}
 .pq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:52px;background:var(--border)}
-.pq{padding:40px}
+.pq{padding:44px 40px}
 .pq.yes{background:var(--dark2)}
 .pq.no{background:var(--dark3)}
-.pq-head{display:flex;align-items:center;gap:10px;margin-bottom:24px}
-.pq-head-icon{font-size:1rem}
-.pq-head-text{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em}
-.pq.yes .pq-head-text{color:rgba(46,204,113,.8)}
-.pq.no .pq-head-text{color:rgba(231,76,60,.7)}
+.pq-head{margin-bottom:28px}
+.pq-marker{font-family:'Bebas Neue',sans-serif;font-size:.75rem;letter-spacing:.3em;display:block;margin-bottom:10px}
+.pq.yes .pq-marker{color:rgba(46,204,113,.8)}
+.pq.no .pq-marker{color:rgba(231,76,60,.65)}
+.pq-head-text{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;line-height:1;display:block}
+.pq.yes .pq-head-text{color:rgba(255,255,255,.85)}
+.pq.no .pq-head-text{color:rgba(255,255,255,.55)}
 .pq-li{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.55)}
 .pq-dot{flex-shrink:0;margin-top:1px;color:var(--gold);font-size:.7rem}
 
 /* ── MÓDULOS ── */
 .modulos{background:var(--dark)}
 .mod-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:52px;flex-wrap:wrap;gap:24px}
-.mod-badge{display:flex;align-items:flex-start;gap:10px;background:rgba(197,151,63,.05);border:1px solid rgba(197,151,63,.2);padding:16px 18px;font-size:.8rem;color:rgba(255,255,255,.55);max-width:300px;line-height:1.6}
+.mod-badge{display:flex;align-items:flex-start;gap:12px;background:rgba(197,151,63,.05);border:1px solid rgba(197,151,63,.2);padding:16px 18px;font-size:.8rem;color:rgba(255,255,255,.55);max-width:300px;line-height:1.6}
 .mod-badge strong{color:var(--gold)}
+.mod-badge-ic{color:var(--gold);flex-shrink:0;margin-top:1px}
+.mod-badge-ic svg{display:block}
 .mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
-.mod-card{background:var(--dark);padding:22px 24px;transition:.25s;position:relative;overflow:hidden;cursor:default}
+.mod-card{background:var(--dark);padding:24px 26px;transition:.25s;position:relative;overflow:hidden;cursor:default}
 .mod-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transition:.3s;transform-origin:left}
 .mod-card:hover{background:var(--dark3)}
 .mod-card:hover::after{transform:scaleX(1)}
 .mod-card.cert{background:linear-gradient(145deg,rgba(197,151,63,.06),rgba(197,151,63,.02));display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:160px}
-.locked-badge{display:inline-flex;align-items:center;gap:4px;font-size:.58rem;font-weight:600;color:var(--gold);background:rgba(197,151,63,.08);border:1px solid rgba(197,151,63,.2);padding:2px 8px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.excl-badge{display:inline-flex;align-items:center;gap:5px;font-size:.56rem;font-weight:700;color:var(--gold);background:rgba(197,151,63,.07);border:1px solid rgba(197,151,63,.18);padding:2px 9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.excl-badge svg{display:block;color:var(--gold)}
 .mod-n{font-size:.58rem;font-weight:600;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
 .mod-nm{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em;margin-bottom:4px;line-height:1.1;color:var(--white)}
 .mod-sub{font-size:.74rem;color:var(--muted);margin-bottom:12px;font-style:italic}
 .mod-tags{display:flex;flex-wrap:wrap;gap:5px}
 .mtag{font-size:.62rem;padding:3px 8px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted);font-weight:500;letter-spacing:.05em}
-.mtag.b{background:rgba(20,40,80,.4);color:#6a9fe0;border-color:rgba(100,160,240,.15)}
 .mod-note{font-size:.65rem;color:var(--gold);margin-top:8px;opacity:.75;letter-spacing:.05em}
+.cert-ic{margin-bottom:16px;color:rgba(197,151,63,.5)}
+.cert-ic svg{display:block;margin:0 auto}
 
 /* ── PROFESSOR ── */
 .prof{background:var(--dark2)}
@@ -235,17 +240,18 @@ section{padding:96px 48px}
 .ach-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:8px;background:var(--border)}
 .ach{background:var(--dark2);padding:16px 18px;display:flex;align-items:center;gap:12px;transition:.2s}
 .ach:hover{background:var(--dark3)}
-.ach-ic{font-size:1.3rem;flex-shrink:0}
+.ach-ic{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold)}
+.ach-ic svg{display:block}
 .ach-t strong{display:block;font-size:.8rem;color:var(--white);font-weight:600}
 .ach-t span{font-size:.7rem;color:var(--muted)}
 
 /* ── TESTEMUNHOS ── */
 .test{background:var(--dark)}
 .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:52px;background:var(--border)}
-.test-card{background:var(--dark);padding:32px;transition:.2s}
+.test-card{background:var(--dark);padding:36px;transition:.2s}
 .test-card:hover{background:var(--dark3)}
-.stars{color:var(--gold);font-size:.85rem;margin-bottom:16px;letter-spacing:3px}
-.test-txt{font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.6);margin-bottom:24px;font-style:italic}
+.stars{color:var(--gold);font-size:.8rem;margin-bottom:18px;letter-spacing:4px}
+.test-txt{font-size:.88rem;line-height:1.85;color:rgba(255,255,255,.6);margin-bottom:28px;font-style:italic}
 .test-au{display:flex;align-items:center;gap:12px}
 .test-av{width:40px;height:40px;background:#1a1a28;border:1px solid transparent;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;color:var(--white);flex-shrink:0;letter-spacing:.05em}
 .test-name{font-weight:600;font-size:.85rem;color:var(--white)}
@@ -268,28 +274,30 @@ section{padding:96px 48px}
 .p-price small{font-size:1.4rem}
 .p-period{font-size:.7rem;color:var(--muted);margin-top:5px;letter-spacing:.05em}
 .p-anual-ref{font-size:.68rem;color:var(--muted);margin-top:4px;font-style:italic}
-.p-renova-aviso{font-size:.68rem;color:#e8975a;background:rgba(232,151,90,.06);border:1px solid rgba(232,151,90,.18);padding:6px 10px;margin-top:8px;display:flex;align-items:center;gap:6px;letter-spacing:.03em}
-.p-vitalicio-destaque{font-size:.7rem;color:var(--gold);font-weight:700;margin-top:8px;text-align:center;letter-spacing:.12em;text-transform:uppercase}
+.p-renova-aviso{font-size:.68rem;color:rgba(232,151,90,.75);margin-top:8px;letter-spacing:.03em;border-left:2px solid rgba(232,151,90,.3);padding-left:8px}
+.p-vitalicio-destaque{font-size:.68rem;color:var(--gold);font-weight:700;margin-top:8px;text-align:center;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
 .p-lista{list-style:none;margin-bottom:26px}
 .p-lista li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:.83rem;color:rgba(255,255,255,.65);line-height:1.5;border-bottom:1px solid rgba(255,255,255,.03)}
 .p-lista li:last-child{border-bottom:none}
-.p-lista .ok{color:var(--green);font-weight:700;flex-shrink:0}
-.p-lista .nok{color:#2a2a3a;flex-shrink:0}
+.p-lista .ok{color:var(--green);font-weight:700;flex-shrink:0;font-size:.9rem}
+.p-lista .nok{color:rgba(255,255,255,.15);flex-shrink:0;font-size:.9rem}
 .p-btn{display:block;text-align:center;padding:15px;font-family:'Inter',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:.2s;border:none;cursor:pointer}
 .p-btn.prim{background:var(--gold);color:var(--dark);box-shadow:0 8px 30px rgba(197,151,63,.25)}
 .p-btn.prim:hover{background:var(--gold2)}
 .p-btn.sec{background:rgba(255,255,255,.04);color:rgba(255,255,255,.55);border:1px solid var(--border)}
 .p-btn.sec:hover{background:rgba(255,255,255,.08);color:var(--white);border-color:rgba(255,255,255,.15)}
-.pay-methods{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-.pay-methods span{font-size:.63rem;color:var(--muted);display:flex;align-items:center;gap:4px;letter-spacing:.05em}
+.pay-methods{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.pay-methods span{font-size:.62rem;color:rgba(255,255,255,.25);letter-spacing:.04em;padding:2px 6px;border:1px solid rgba(255,255,255,.07)}
 
 /* ── GARANTIA ── */
 .garantia{background:var(--dark);text-align:center}
 .gar-box{max-width:620px;margin:0 auto;background:var(--dark3);border:1px solid rgba(197,151,63,.2);padding:56px 48px}
-.gar-ic{font-size:3.2rem;margin-bottom:20px;display:block}
+.gar-dec{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:28px}
+.gar-dec-line{width:32px;height:1px;background:rgba(197,151,63,.4)}
+.gar-dec-mark{font-family:'Bebas Neue',sans-serif;font-size:.68rem;letter-spacing:.3em;color:var(--gold);opacity:.7}
 .gar-box h2{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;letter-spacing:.04em;margin-bottom:16px;color:var(--white)}
 .gar-box p{font-size:.92rem;line-height:1.9;color:var(--muted)}
-.gar-lei{font-size:.74rem;color:rgba(255,255,255,.25);margin-top:14px;font-style:italic;letter-spacing:.04em}
+.gar-lei{font-size:.74rem;color:rgba(255,255,255,.2);margin-top:14px;font-style:italic;letter-spacing:.04em}
 
 /* ── FAQ ── */
 .faq{background:var(--dark2)}
@@ -311,7 +319,7 @@ section{padding:96px 48px}
 .cta-final h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,5.5vw,5.5rem);font-weight:400;letter-spacing:.02em;margin-bottom:18px;color:var(--white);position:relative;z-index:1;line-height:.95}
 .cta-final h2 em{font-style:normal;color:var(--gold)}
 .cta-final p{font-size:.97rem;color:rgba(255,255,255,.5);margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8;position:relative;z-index:1}
-.cta-sub{margin-top:22px;font-size:.65rem;color:rgba(255,255,255,.25);position:relative;z-index:1;letter-spacing:.15em;text-transform:uppercase}
+.cta-sub{margin-top:22px;font-size:.65rem;color:rgba(255,255,255,.22);position:relative;z-index:1;letter-spacing:.15em;text-transform:uppercase}
 
 /* ── FOOTER ── */
 footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
@@ -424,7 +432,7 @@ footer a:hover{color:var(--gold)}
       </div>
       <div class="ctas">
         <!-- TODO: Substituir href pelo link real do checkout -->
-        <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO" class="btn-gold" target="_blank" rel="noopener noreferrer" data-plan="vitalicio" aria-label="Quero me inscrever agora na Escola da Fé">▶ Quero me inscrever agora</a>
+        <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO" class="btn-gold" target="_blank" rel="noopener noreferrer" data-plan="vitalicio" aria-label="Quero me inscrever agora na Escola da Fé">Quero me inscrever →</a>
         <a href="#modulos" class="btn-ghost2" aria-label="Ver os 12 módulos da Escola da Fé">Ver os módulos →</a>
       </div>
     </div>
@@ -435,11 +443,36 @@ footer a:hover{color:var(--gold)}
         <div class="hcard-name">Escola da Fé — Completa</div>
       </div>
       <div class="hcard-body">
-        <div class="hfeat"><div class="hfeat-ic">📖</div><div class="hfeat-t"><strong>12 Módulos Temáticos</strong><span>Progressão do fundamento à missão</span></div></div>
-        <div class="hfeat"><div class="hfeat-ic">🎥</div><div class="hfeat-t"><strong>Vídeos Introdutórios Exclusivos</strong><span>1 vídeo de abertura por módulo</span></div></div>
-        <div class="hfeat"><div class="hfeat-ic">✅</div><div class="hfeat-t"><strong>Provas de Avaliação</strong><span>Fixação real do conteúdo em cada bloco</span></div></div>
-        <div class="hfeat"><div class="hfeat-ic">🏅</div><div class="hfeat-t"><strong>Certificado de Conclusão</strong><span>Reconhecimento formal da formação</span></div></div>
-        <div class="hfeat"><div class="hfeat-ic">👥</div><div class="hfeat-t"><strong>Comunidade Exclusiva</strong><span>Acesso à comunidade de membros ativa</span></div></div>
+        <div class="hfeat">
+          <div class="hfeat-ic">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V4M3 2.5h4a1 1 0 011 1v9a1.5 1.5 0 00-1.5-1.5H3V2.5z"/><path d="M13 2.5H9a1 1 0 00-1 1v9a1.5 1.5 0 011.5-1.5H13V2.5z"/></svg>
+          </div>
+          <div class="hfeat-t"><strong>12 Módulos Temáticos</strong><span>Progressão do fundamento à missão</span></div>
+        </div>
+        <div class="hfeat">
+          <div class="hfeat-ic">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="1.5"/><path d="M6.5 6.5l4 1.5-4 1.5V6.5z" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <div class="hfeat-t"><strong>Vídeos Introdutórios Exclusivos</strong><span>1 vídeo de abertura por módulo</span></div>
+        </div>
+        <div class="hfeat">
+          <div class="hfeat-ic">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2H13a1 1 0 011 1v11a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1h3"/><path d="M6 1h4v3H6V1z"/><path d="M4.5 8l2.5 2.5L11.5 6"/></svg>
+          </div>
+          <div class="hfeat-t"><strong>Provas de Avaliação</strong><span>Fixação real do conteúdo em cada bloco</span></div>
+        </div>
+        <div class="hfeat">
+          <div class="hfeat-ic">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="6" r="4"/><path d="M5.2 9.5L4 15l4-2 4 2-1.2-5.5"/></svg>
+          </div>
+          <div class="hfeat-t"><strong>Certificado de Conclusão</strong><span>Reconhecimento formal da formação</span></div>
+        </div>
+        <div class="hfeat">
+          <div class="hfeat-ic">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="5" r="2.5"/><path d="M1 14c0-2.8 2.2-5 5-5s5 2.2 5 5"/><circle cx="12" cy="5" r="2"/><path d="M15 14c0-2.3-1.3-4-3-4"/></svg>
+          </div>
+          <div class="hfeat-t"><strong>Comunidade Exclusiva</strong><span>Acesso à comunidade de membros ativa</span></div>
+        </div>
         <div class="hprice">
           <div class="hprice-lbl">Acesso completo por</div>
           <div class="hprice-val"><small>R$</small>297</div>
@@ -474,9 +507,21 @@ footer a:hover{color:var(--gold)}
     <h2 class="sec-title">Sua fé está<br><em>estagnada?</em></h2>
     <p class="sec-desc">Muitos cristãos vivem anos na igreja sem nunca ter uma formação bíblica sólida. O resultado é previsível:</p>
     <div class="dor-grid">
-      <div class="pain fade-in" style="--delay:.1s"><span class="pain-num">01</span><span class="pain-em">😕</span><h3>Fé sem fundamento</h3><p>Ouve a Palavra há anos, mas não sabe explicar o que crê. Qualquer questionamento abala.</p></div>
-      <div class="pain fade-in" style="--delay:.2s"><span class="pain-num">02</span><span class="pain-em">🔄</span><h3>Vida espiritual sem avanço</h3><p>Momentos de vitória seguidos do mesmo ciclo. Falta direção, consistência e propósito claro.</p></div>
-      <div class="pain fade-in" style="--delay:.3s"><span class="pain-num">03</span><span class="pain-em">🧩</span><h3>Bíblia fragmentada</h3><p>Conhece versículos isolados, mas não entende como tudo se conecta da criação ao hoje.</p></div>
+      <div class="pain fade-in" style="--delay:.1s">
+        <span class="pain-num">01</span>
+        <h3>Fé sem fundamento</h3>
+        <p>Ouve a Palavra há anos, mas não sabe explicar o que crê. Qualquer questionamento abala.</p>
+      </div>
+      <div class="pain fade-in" style="--delay:.2s">
+        <span class="pain-num">02</span>
+        <h3>Vida espiritual sem avanço</h3>
+        <p>Momentos de vitória seguidos do mesmo ciclo. Falta direção, consistência e propósito claro.</p>
+      </div>
+      <div class="pain fade-in" style="--delay:.3s">
+        <span class="pain-num">03</span>
+        <h3>Bíblia fragmentada</h3>
+        <p>Conhece versículos isolados, mas não entende como tudo se conecta da criação ao hoje.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -490,16 +535,34 @@ footer a:hover{color:var(--gold)}
         <h2 class="sec-title">Da raiz<br>ao fruto.</h2>
         <p class="sec-desc">A Escola da Fé é uma formação bíblica completa e progressiva. Cada módulo constrói sobre o anterior.</p>
         <ul class="chk">
-          <li><span class="chk-ic">✓</span>Conteúdo progressivo — do fundamento ao avançado</li>
-          <li><span class="chk-ic">✓</span>Professores especialistas em cada tema</li>
-          <li><span class="chk-ic">✓</span>Vídeos introdutórios exclusivos por módulo</li>
-          <li><span class="chk-ic">✓</span>Provas ao final de cada bloco para fixação</li>
-          <li><span class="chk-ic">✓</span>Comunidade ativa de alunos comprometidos</li>
-          <li><span class="chk-ic">✓</span>Certificado de conclusão ao final</li>
+          <li>
+            <span class="chk-ic"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 5l2.5 3L8.5 1.5"/></svg></span>
+            Conteúdo progressivo — do fundamento ao avançado
+          </li>
+          <li>
+            <span class="chk-ic"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 5l2.5 3L8.5 1.5"/></svg></span>
+            Professores especialistas em cada tema
+          </li>
+          <li>
+            <span class="chk-ic"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 5l2.5 3L8.5 1.5"/></svg></span>
+            Vídeos introdutórios exclusivos por módulo
+          </li>
+          <li>
+            <span class="chk-ic"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 5l2.5 3L8.5 1.5"/></svg></span>
+            Provas ao final de cada bloco para fixação
+          </li>
+          <li>
+            <span class="chk-ic"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 5l2.5 3L8.5 1.5"/></svg></span>
+            Comunidade ativa de alunos comprometidos
+          </li>
+          <li>
+            <span class="chk-ic"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 5l2.5 3L8.5 1.5"/></svg></span>
+            Certificado de conclusão ao final
+          </li>
         </ul>
       </div>
       <div class="quote-box fade-in">
-        <span class="quote-mark">❝</span>
+        <span class="quote-mark" aria-hidden="true">"</span>
         <p class="quote-txt">"A maior riqueza que posso oferecer não é uma pregação — é uma formação. Uma base tão sólida que nenhuma tempestade vai derrubar."</p>
         <div class="quote-au">
           <div class="au-av">AR</div>
@@ -517,7 +580,10 @@ footer a:hover{color:var(--gold)}
     <h2 class="sec-title">Para quem<br>é esta escola?</h2>
     <div class="pq-grid">
       <div class="pq yes fade-in">
-        <div class="pq-head"><span class="pq-head-icon">✅</span><span class="pq-head-text">É para você se...</span></div>
+        <div class="pq-head">
+          <span class="pq-marker">Para você</span>
+          <span class="pq-head-text">É para você se...</span>
+        </div>
         <div class="pq-li"><span class="pq-dot">→</span>Quer entender a Bíblia de forma profunda e conectada, não apenas versículos isolados</div>
         <div class="pq-li"><span class="pq-dot">→</span>Está há anos na igreja mas nunca passou por uma formação bíblica estruturada</div>
         <div class="pq-li"><span class="pq-dot">→</span>Deseja crescer espiritualmente com consistência, não apenas em momentos de culto</div>
@@ -526,7 +592,10 @@ footer a:hover{color:var(--gold)}
         <div class="pq-li"><span class="pq-dot">→</span>Quer pertencer a uma comunidade ativa de cristãos comprometidos</div>
       </div>
       <div class="pq no fade-in" style="--delay:.15s">
-        <div class="pq-head"><span class="pq-head-icon">❌</span><span class="pq-head-text">Não é para você se...</span></div>
+        <div class="pq-head">
+          <span class="pq-marker">Não é para você</span>
+          <span class="pq-head-text">Não é para você se...</span>
+        </div>
         <div class="pq-li"><span class="pq-dot">→</span>Está buscando entretenimento ou conteúdo superficial de motivação</div>
         <div class="pq-li"><span class="pq-dot">→</span>Não tem disposição para estudar com seriedade e fazer as avaliações</div>
         <div class="pq-li"><span class="pq-dot">→</span>Quer respostas rápidas sem comprometimento com o processo de formação</div>
@@ -544,22 +613,32 @@ footer a:hover{color:var(--gold)}
         <div class="sec-tag"><span class="sec-tag-line"></span><span class="sec-tag-text">O Conteúdo</span></div>
         <h2 class="sec-title">12 Módulos de<br>formação completa.</h2>
       </div>
-      <div class="mod-badge">🔒 <div><strong>Vídeo Introdutório Exclusivo</strong><br>Cada módulo tem um vídeo de abertura disponível apenas para membros.</div></div>
+      <div class="mod-badge">
+        <span class="mod-badge-ic">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="2" width="12" height="10" rx="1"/><path d="M4 2V1M10 2V1"/><line x1="1" y1="5" x2="13" y2="5"/></svg>
+        </span>
+        <div><strong>Vídeo Introdutório Exclusivo</strong><br>Cada módulo tem um vídeo de abertura disponível apenas para membros.</div>
+      </div>
     </div>
     <div class="mod-grid">
-      <div class="mod-card fade-in" style="--delay:.05s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 1</div><div class="mod-nm">EDEN</div><div class="mod-sub">Origens e Respostas</div><div class="mod-tags"><span class="mtag">13 aulas</span><span class="mtag b">Ev. Altomir</span><span class="mtag">Fundamentos</span></div></div>
-      <div class="mod-card fade-in" style="--delay:.10s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 2</div><div class="mod-nm">GUIADOS</div><div class="mod-sub">A Direção Segura</div><div class="mod-tags"><span class="mtag">9 aulas</span><span class="mtag b">Ev. Altomir</span><span class="mtag">Espírito Santo</span></div></div>
-      <div class="mod-card fade-in" style="--delay:.15s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 3</div><div class="mod-nm">FÉ &amp; JUSTIÇA</div><div class="mod-sub">Atitude e Posição</div><div class="mod-tags"><span class="mtag">8 aulas</span><span class="mtag">Identidade</span><span class="mtag">Fé Bíblica</span></div></div>
-      <div class="mod-card fade-in" style="--delay:.20s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 4</div><div class="mod-nm">EMBAIXADORES</div><div class="mod-sub">Poder para Interferir</div><div class="mod-tags"><span class="mtag">8 aulas</span><span class="mtag">Nome de Jesus</span><span class="mtag">Autoridade</span></div></div>
-      <div class="mod-card fade-in" style="--delay:.25s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 5</div><div class="mod-nm">GRAÇA</div><div class="mod-sub">A Pegada de Deus Conosco</div><div class="mod-tags"><span class="mtag">11 aulas</span><span class="mtag">Gálatas</span><span class="mtag">Prosperidade</span></div></div>
-      <div class="mod-card fade-in" style="--delay:.30s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 6</div><div class="mod-nm"><span lang="en">CONNECT</span></div><div class="mod-sub">O Céu e a Terra se Fundem</div><div class="mod-tags"><span class="mtag">5 aulas</span><span class="mtag">Oração</span><span class="mtag">Jejum</span></div></div>
-      <div class="mod-card fade-in" style="--delay:.05s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 7</div><div class="mod-nm">DEUS DE AMOR</div><div class="mod-sub">Relacionamentos Poderosos</div><div class="mod-tags"><span class="mtag">7 aulas</span><span class="mtag">Família Cristã</span><span class="mtag">Caráter</span></div></div>
-      <div class="mod-card fade-in" style="--delay:.10s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 8</div><div class="mod-nm">ÚLTIMOS DIAS</div><div class="mod-sub">Influência do Passado e Futuro</div><div class="mod-tags"><span class="mtag">10 aulas</span><span class="mtag">Escatologia</span><span class="mtag">História</span></div></div>
-      <!-- TODO: Verificar se o módulo 9 está completo; atualizar contagem de aulas se necessário -->
-      <div class="mod-card fade-in" style="--delay:.15s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 9</div><div class="mod-nm"><span lang="en">EMPOWER</span></div><div class="mod-sub">O Propósito Coletivo</div><div class="mod-tags"><span class="mtag">2 aulas</span><span class="mtag">Reconciliação</span><span class="mtag">Ministério</span></div><div class="mod-note">+ Material de aprofundamento em PDF</div></div>
-      <div class="mod-card fade-in" style="--delay:.20s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 10</div><div class="mod-nm">SOBRENATURAL</div><div class="mod-sub">Potencializando o Natural</div><div class="mod-tags"><span class="mtag">7 aulas</span><span class="mtag">Unção</span><span class="mtag">Espírito Santo</span></div></div>
-      <div class="mod-card fade-in" style="--delay:.25s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 11</div><div class="mod-nm"><span lang="en">LIFE STYLE</span></div><div class="mod-sub">Impacto Pessoal</div><div class="mod-tags"><span class="mtag">12 aulas</span><span class="mtag">Livro de Atos</span><span class="mtag">Louvor</span></div></div>
-      <div class="mod-card cert fade-in" style="--delay:.30s"><div style="font-size:2.2rem;margin-bottom:12px">🎓</div><div class="mod-nm">Certificado de<br>Conclusão</div><div class="mod-sub" style="margin-bottom:0">Ao completar os 12 módulos</div></div>
+      <div class="mod-card fade-in" style="--delay:.05s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 1</div><div class="mod-nm">EDEN</div><div class="mod-sub">Origens e Respostas</div><div class="mod-tags"><span class="mtag">13 aulas</span><span class="mtag">Ev. Altomir</span><span class="mtag">Fundamentos</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.10s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 2</div><div class="mod-nm">GUIADOS</div><div class="mod-sub">A Direção Segura</div><div class="mod-tags"><span class="mtag">9 aulas</span><span class="mtag">Ev. Altomir</span><span class="mtag">Espírito Santo</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.15s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 3</div><div class="mod-nm">FÉ &amp; JUSTIÇA</div><div class="mod-sub">Atitude e Posição</div><div class="mod-tags"><span class="mtag">8 aulas</span><span class="mtag">Identidade</span><span class="mtag">Fé Bíblica</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.20s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 4</div><div class="mod-nm">EMBAIXADORES</div><div class="mod-sub">Poder para Interferir</div><div class="mod-tags"><span class="mtag">8 aulas</span><span class="mtag">Nome de Jesus</span><span class="mtag">Autoridade</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.25s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 5</div><div class="mod-nm">GRAÇA</div><div class="mod-sub">A Pegada de Deus Conosco</div><div class="mod-tags"><span class="mtag">11 aulas</span><span class="mtag">Gálatas</span><span class="mtag">Prosperidade</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.30s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 6</div><div class="mod-nm"><span lang="en">CONNECT</span></div><div class="mod-sub">O Céu e a Terra se Fundem</div><div class="mod-tags"><span class="mtag">5 aulas</span><span class="mtag">Oração</span><span class="mtag">Jejum</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.05s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 7</div><div class="mod-nm">DEUS DE AMOR</div><div class="mod-sub">Relacionamentos Poderosos</div><div class="mod-tags"><span class="mtag">7 aulas</span><span class="mtag">Família Cristã</span><span class="mtag">Caráter</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.10s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 8</div><div class="mod-nm">ÚLTIMOS DIAS</div><div class="mod-sub">Influência do Passado e Futuro</div><div class="mod-tags"><span class="mtag">10 aulas</span><span class="mtag">Escatologia</span><span class="mtag">História</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.15s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 9</div><div class="mod-nm"><span lang="en">EMPOWER</span></div><div class="mod-sub">O Propósito Coletivo</div><div class="mod-tags"><span class="mtag">2 aulas</span><span class="mtag">Reconciliação</span><span class="mtag">Ministério</span></div><div class="mod-note">+ Material de aprofundamento em PDF</div></div>
+      <div class="mod-card fade-in" style="--delay:.20s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 10</div><div class="mod-nm">SOBRENATURAL</div><div class="mod-sub">Potencializando o Natural</div><div class="mod-tags"><span class="mtag">7 aulas</span><span class="mtag">Unção</span><span class="mtag">Espírito Santo</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.25s"><div class="excl-badge"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><rect x="1.5" y="4" width="6" height="4.5" rx=".5"/><path d="M2.5 4V3a2 2 0 014 0v1"/></svg> Exclusivo</div><div class="mod-n">Módulo 11</div><div class="mod-nm"><span lang="en">LIFE STYLE</span></div><div class="mod-sub">Impacto Pessoal</div><div class="mod-tags"><span class="mtag">12 aulas</span><span class="mtag">Livro de Atos</span><span class="mtag">Louvor</span></div></div>
+      <div class="mod-card cert fade-in" style="--delay:.30s">
+        <div class="cert-ic">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="14" r="9"/><path d="M11.5 21.5L9 34l9-4.5L27 34l-2.5-12.5"/><circle cx="18" cy="14" r="4"/></svg>
+        </div>
+        <div class="mod-nm">Certificado de<br>Conclusão</div>
+        <div class="mod-sub" style="margin-bottom:0">Ao completar os 12 módulos</div>
+      </div>
     </div>
   </div>
 </section>
@@ -585,10 +664,30 @@ footer a:hover{color:var(--gold)}
         <p class="prof-bio">Empresário por profissão, pregador e autor de livros de fé por propósito. O Evangelista Altomir Rangel é fundador do Ministério Transforme Seu Mundo e tem dedicado décadas à pregação da Palavra com profundidade teológica e poder espiritual.</p>
         <p class="prof-bio">Na Escola da Fé, o Altomir ensina pessoalmente nos módulos fundamentos — Eden e Guiados — e coordena um corpo docente de professores especialistas em cada área do conteúdo.</p>
         <div class="ach-grid">
-          <div class="ach"><div class="ach-ic">🎤</div><div class="ach-t"><strong>Décadas de ministério</strong><span>Pregação e ensino bíblico</span></div></div>
-          <div class="ach"><div class="ach-ic">📚</div><div class="ach-t"><strong>Autor de livros cristãos</strong><span>Obras de fé e propósito</span></div></div>
-          <div class="ach"><div class="ach-ic">🌍</div><div class="ach-t"><strong>Ministério Transforme</strong><span>Impacto local e nacional</span></div></div>
-          <div class="ach"><div class="ach-ic">📺</div><div class="ach-t"><strong>Canal no YouTube</strong><span>Mensagens e ensinamentos</span></div></div>
+          <div class="ach">
+            <div class="ach-ic">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="1" width="5" height="8" rx="2.5"/><path d="M2.5 8c0 3 2.5 5.5 5.5 5.5S13.5 11 13.5 8"/><line x1="8" y1="13.5" x2="8" y2="15.5"/><line x1="5.5" y1="15.5" x2="10.5" y2="15.5"/></svg>
+            </div>
+            <div class="ach-t"><strong>Décadas de ministério</strong><span>Pregação e ensino bíblico</span></div>
+          </div>
+          <div class="ach">
+            <div class="ach-ic">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 1.5h12a1 1 0 011 1v12a1 1 0 01-1 1H2a1 1 0 01-1-1v-12a1 1 0 011-1z"/><line x1="4" y1="5.5" x2="12" y2="5.5"/><line x1="4" y1="8" x2="12" y2="8"/><line x1="4" y1="10.5" x2="9" y2="10.5"/></svg>
+            </div>
+            <div class="ach-t"><strong>Autor de livros cristãos</strong><span>Obras de fé e propósito</span></div>
+          </div>
+          <div class="ach">
+            <div class="ach-ic">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 1.5c-2 3-2 9 0 13M8 1.5c2 3 2 9 0 13M1.5 8h13"/></svg>
+            </div>
+            <div class="ach-t"><strong>Ministério Transforme</strong><span>Impacto local e nacional</span></div>
+          </div>
+          <div class="ach">
+            <div class="ach-ic">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" aria-hidden="true"><path d="M2 5.5c0-1 .8-2 1.8-2.2C5 3.1 8 3.1 8 3.1s3 0 4.2.2c1 .2 1.8 1.2 1.8 2.2v5c0 1-.8 2-1.8 2.2C11 12.9 8 12.9 8 12.9s-3 0-4.2-.2C2.8 12.5 2 11.5 2 10.5v-5z"/><path d="M6.5 6.5l4 1.5-4 1.5V6.5z" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <div class="ach-t"><strong>Canal no YouTube</strong><span>Mensagens e ensinamentos</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -658,7 +757,7 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
-<!-- PREÇOS — Mensal → Anual → Vitalício -->
+<!-- PREÇOS -->
 <section class="precos" id="precos">
   <div class="container">
     <div class="precos-inner">
@@ -675,20 +774,20 @@ footer a:hover{color:var(--gold)}
         <div class="p-val">
           <div class="p-price"><small>R$</small>29<small>,90</small></div>
           <div class="p-period">por mês · cancele quando quiser</div>
-          <div class="p-anual-ref">≈ R$359 por ano se mantiver ativo</div>
+          <div class="p-anual-ref">aprox. R$359 por ano se mantiver ativo</div>
         </div>
         <ul class="p-lista">
           <li><span class="ok">✓</span>Vídeos introdutórios de cada módulo</li>
           <li><span class="ok">✓</span>Acesso à comunidade de membros</li>
           <li><span class="ok">✓</span>Lives mensais com o Altomir</li>
           <li><span class="ok">✓</span>Conteúdo bônus exclusivo</li>
-          <li><span class="nok">–</span>Curso completo com 93 aulas</li>
-          <li><span class="nok">–</span>Provas de avaliação</li>
-          <li><span class="nok">–</span>Certificado de conclusão</li>
+          <li><span class="nok">—</span>Curso completo com 93 aulas</li>
+          <li><span class="nok">—</span>Provas de avaliação</li>
+          <li><span class="nok">—</span>Certificado de conclusão</li>
         </ul>
         <!-- TODO: Substituir href pelo link real do checkout (plano mensal) -->
         <a href="https://pay.hotmart.com/INSERIR-LINK-MENSAL" class="p-btn sec" target="_blank" rel="noopener noreferrer" data-plan="mensal" aria-label="Começar como Membro por R$29,90 por mês">Começar como Membro</a>
-        <div class="pay-methods"><span>💠 Pix</span><span>💳 Cartão</span><span>🎫 Boleto</span></div>
+        <div class="pay-methods"><span>Pix</span><span>Cartão</span><span>Boleto</span></div>
       </div>
 
       <!-- Anual -->
@@ -698,7 +797,7 @@ footer a:hover{color:var(--gold)}
         <div class="p-val">
           <div class="p-price"><small>R$</small>197</div>
           <div class="p-period">por ano · curso + comunidade</div>
-          <div class="p-renova-aviso"><span>⚠</span> Renova automaticamente a R$197/ano</div>
+          <div class="p-renova-aviso">Renova automaticamente a R$197/ano</div>
         </div>
         <ul class="p-lista">
           <li><span class="ok">✓</span>Curso completo — 93 aulas</li>
@@ -706,22 +805,22 @@ footer a:hover{color:var(--gold)}
           <li><span class="ok">✓</span>Provas e certificado</li>
           <li><span class="ok">✓</span>Comunidade ativa por 12 meses</li>
           <li><span class="ok">✓</span>Lives mensais com o Altomir</li>
-          <li><span class="nok">–</span>Acesso vitalício (renova anualmente)</li>
+          <li><span class="nok">—</span>Acesso vitalício (renova anualmente)</li>
         </ul>
         <!-- TODO: Substituir href pelo link real do checkout (plano anual) -->
         <a href="https://pay.hotmart.com/INSERIR-LINK-ANUAL" class="p-btn sec" target="_blank" rel="noopener noreferrer" data-plan="anual" aria-label="Assinar plano anual por R$197 por ano">Assinar plano anual</a>
-        <div class="pay-methods"><span>💠 Pix</span><span>💳 Cartão</span><span>🎫 Boleto</span></div>
+        <div class="pay-methods"><span>Pix</span><span>Cartão</span><span>Boleto</span></div>
       </div>
 
       <!-- Vitalício — DESTACADO -->
       <div class="plano top fade-in" style="--delay:.25s">
-        <div class="plano-badge-top">✦ Mais Escolhido</div>
+        <div class="plano-badge-top">Mais Escolhido</div>
         <div class="p-cat">Acesso Completo</div>
         <div class="p-name">Escola da Fé — Vitalício</div>
         <div class="p-val">
           <div class="p-price"><small>R$</small>297</div>
           <div class="p-period">pagamento único · acesso vitalício</div>
-          <div class="p-vitalicio-destaque">✦ Pague uma vez. Acesse para sempre.</div>
+          <div class="p-vitalicio-destaque">Pague uma vez. Acesse para sempre.</div>
         </div>
         <ul class="p-lista">
           <li><span class="ok">✓</span>Todos os 12 módulos — 93 aulas</li>
@@ -733,8 +832,8 @@ footer a:hover{color:var(--gold)}
           <li><span class="ok">✓</span>Acesso vitalício — sem mensalidade</li>
         </ul>
         <!-- TODO: Substituir href pelo link real do checkout (plano vitalício) -->
-        <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO" class="p-btn prim" target="_blank" rel="noopener noreferrer" data-plan="vitalicio" aria-label="Garantir acesso completo e vitalício por R$297">▶ Garantir acesso completo</a>
-        <div class="pay-methods"><span>💠 Pix</span><span>💳 12x de R$27,90</span><span>🎫 Boleto</span></div>
+        <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO" class="p-btn prim" target="_blank" rel="noopener noreferrer" data-plan="vitalicio" aria-label="Garantir acesso completo e vitalício por R$297">Garantir acesso completo →</a>
+        <div class="pay-methods"><span>Pix</span><span>12x de R$27,90</span><span>Boleto</span></div>
       </div>
 
     </div>
@@ -745,8 +844,12 @@ footer a:hover{color:var(--gold)}
 <section class="garantia">
   <div class="container">
     <div class="gar-box fade-in">
-      <span class="gar-ic">🛡️</span>
-      <h2>Garantia de 7 dias</h2>
+      <div class="gar-dec">
+        <span class="gar-dec-line"></span>
+        <span class="gar-dec-mark">Garantia Total</span>
+        <span class="gar-dec-line"></span>
+      </div>
+      <h2>7 dias de garantia</h2>
       <p>Acreditamos tanto no conteúdo da Escola da Fé que oferecemos 7 dias de garantia total. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento — sem perguntas, sem burocracia.</p>
       <p class="gar-lei">Direito previsto no Código de Defesa do Consumidor — cumprido sem burocracia.</p>
     </div>
@@ -799,7 +902,7 @@ footer a:hover{color:var(--gold)}
     <!-- TODO: Atualizar para o número real de alunos -->
     <p>Mais de <strong style="color:rgba(255,255,255,.8)">500 cristãos</strong> já decidiram levar a sério sua formação bíblica. 12 módulos, 93 aulas, professores especialistas — tudo em um só lugar.</p>
     <!-- TODO: Substituir href pelo link real do checkout -->
-    <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO" class="btn-gold" target="_blank" rel="noopener noreferrer" data-plan="vitalicio" style="font-size:.75rem;padding:20px 44px;margin:0 auto" aria-label="Garantir minha vaga na Escola da Fé agora">▶ Garantir minha vaga agora</a>
+    <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO" class="btn-gold" target="_blank" rel="noopener noreferrer" data-plan="vitalicio" style="font-size:.75rem;padding:20px 44px;margin:0 auto" aria-label="Garantir minha vaga na Escola da Fé agora">Garantir minha vaga →</a>
     <p class="cta-sub">Garantia 7 dias · Acesso imediato · Pix · 12x · Boleto</p>
   </div>
 </section>
@@ -821,7 +924,7 @@ footer a:hover{color:var(--gold)}
     <span class="mob-cta-sub">vitalício</span>
   </div>
   <!-- TODO: Substituir href pelo link real do checkout -->
-  <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO" class="mob-cta-btn" target="_blank" rel="noopener noreferrer" data-plan="vitalicio" aria-label="Garantir vaga por R$297">▶ Garantir vaga</a>
+  <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO" class="mob-cta-btn" target="_blank" rel="noopener noreferrer" data-plan="vitalicio" aria-label="Garantir vaga por R$297">Garantir vaga →</a>
 </div>
 
 <!-- FOOTER -->
@@ -945,29 +1048,17 @@ document.querySelectorAll('.test-av[data-name]').forEach(el => {
 
 // ── MOBILE CTA BAR ──
 const mobCtaBar = document.getElementById('mobCtaBar');
-const heroSection = document.getElementById('heroSection');
-if (mobCtaBar && heroSection) {
-  const hObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (window.innerWidth <= 640) {
-        mobCtaBar.classList.toggle('visible', !e.isIntersecting);
-      }
-    });
-  }, {threshold: 0});
-  hObs.observe(heroSection);
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 640) mobCtaBar.classList.remove('visible');
-  }, {passive:true});
+if (mobCtaBar) {
+  const heroSec = document.getElementById('heroSection');
+  const ctaSec = document.querySelector('.cta-final');
+  const barObs = new IntersectionObserver((entries) => {
+    const heroVisible = entries.find(e => e.target === heroSec)?.isIntersecting ?? true;
+    const ctaVisible = entries.find(e => e.target === ctaSec)?.isIntersecting ?? false;
+    mobCtaBar.classList.toggle('visible', !heroVisible && !ctaVisible);
+  }, {threshold: 0.1});
+  if (heroSec) barObs.observe(heroSec);
+  if (ctaSec) barObs.observe(ctaSec);
 }
-
-// ── EVENT TRACKING (ativa quando Analytics configurado) ──
-document.querySelectorAll('[data-plan]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const plan = btn.dataset.plan;
-    if (typeof gtag !== 'undefined') gtag('event','begin_checkout',{currency:'BRL',items:[{item_name:'escola_da_fe_'+plan}]});
-    if (typeof fbq !== 'undefined') fbq('track','InitiateCheckout',{content_name:'Escola da Fé - '+plan});
-  });
-});
 </script>
 </body>
 </html>
