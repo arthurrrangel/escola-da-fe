@@ -3,9 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Escola da Fé — Formação Cristã Completa com Altomir Rangel</title>
+<title>Escola da Fé — Formação Bíblica Completa com Altomir Rangel</title>
+
+<!-- Favicon SVG inline -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23080C14'/><rect x='14' y='4' width='4' height='24' rx='2' fill='%23C9963F'/><rect x='6' y='11' width='20' height='4' rx='2' fill='%23C9963F'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%23080C14'/><rect x='78' y='22' width='24' height='136' rx='12' fill='%23C9963F'/><rect x='32' y='64' width='116' height='24' rx='12' fill='%23C9963F'/></svg>">
+
+<!-- SEO -->
+<meta name="description" content="Escola da Fé — Formação bíblica completa e progressiva com o Evangelista Altomir Rangel. 12 módulos, 93 aulas, 7+ professores especialistas, certificado de conclusão. Acesso vitalício por R$297.">
+<meta name="keywords" content="escola bíblica online, formação cristã, curso bíblico, Altomir Rangel, discipulado bíblico, formação evangélica, Ministério Transforme Seu Mundo">
+<meta name="author" content="Ministério Transforme Seu Mundo">
+<meta name="robots" content="index, follow">
+<meta http-equiv="content-language" content="pt-BR">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Escola da Fé — Formação Bíblica Completa com Altomir Rangel">
+<meta property="og:description" content="12 módulos de formação bíblica progressiva. 93 aulas, 7+ professores especialistas, provas e certificado de conclusão. Acesso vitalício.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1529628600792-e8e7c0d3ade2?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Interior de uma igreja com luz natural — Escola da Fé">
+<meta property="og:url" content="https://escola-da-fe-nu.vercel.app">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Escola da Fé">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Escola da Fé — Formação Bíblica Completa">
+<meta name="twitter:description" content="12 módulos de formação bíblica progressiva com o Ev. Altomir Rangel.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1529628600792-e8e7c0d3ade2?auto=format&fit=crop&w=1200&h=630&q=80">
+
+<link rel="canonical" href="https://escola-da-fe-nu.vercel.app">
+
+<!-- Performance: preconnect + preload fontes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap">
+
+<!-- TODO: Google Analytics 4 — substituir G-XXXXXXXXXX pelo ID real -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+
+<!-- TODO: Meta Pixel — substituir PIXEL_ID_AQUI pelo ID real -->
+<!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','PIXEL_ID_AQUI');fbq('track','PageView');</script> -->
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -21,12 +64,21 @@
   --green:#2ECC71;
   --red:#E74C3C;
 }
-html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
+/* ── FOCUS VISIBLE ── */
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+:focus:not(:focus-visible){outline:none}
+
+/* ── FADE-IN ── */
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;transition-delay:var(--delay,0s)}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.fade-in{opacity:1;transform:none;transition:none}}
+
 /* ── NAVBAR ── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:background .4s,box-shadow .4s}
-.nav.solid{background:rgba(8,12,20,.96);backdrop-filter:blur(20px);box-shadow:0 2px 32px rgba(0,0,0,.4)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:background .4s,box-shadow .4s;will-change:background,box-shadow}
+.nav.solid{background:rgba(8,12,20,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 2px 32px rgba(0,0,0,.4)}
 .logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.3px}
 .logo b{color:var(--gold)}
 .nav-links{display:flex;gap:4px;list-style:none;align-items:center}
@@ -36,15 +88,16 @@ body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--white);ov
 .nav-btn:hover{background:var(--gold2)!important;color:var(--dark)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
-.mob-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(8,12,20,.98);backdrop-filter:blur(20px);padding:20px 24px 28px;border-bottom:1px solid var(--border);z-index:199}
+.mob-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(8,12,20,.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:20px 24px 28px;border-bottom:1px solid var(--border);z-index:199}
 .mob-menu.open{display:block}
 .mob-menu a{display:block;padding:14px 16px;color:var(--muted);text-decoration:none;font-size:.97rem;font-weight:500;border-radius:8px;transition:color .2s,background .2s}
 .mob-menu a:hover{color:var(--white);background:rgba(255,255,255,.05)}
 .mob-btn{margin-top:12px;display:block;background:var(--gold);color:var(--dark)!important;text-align:center;font-weight:700;padding:16px;border-radius:10px;font-size:1rem}
 
 /* ── HERO ── */
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1529628600792-e8e7c0d3ade2?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center top}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;padding:0}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1529628600792-e8e7c0d3ade2?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center top;will-change:transform}
+@media(max-width:640px){.hero-bg{background-image:url('https://images.unsplash.com/photo-1529628600792-e8e7c0d3ade2?auto=format&fit=crop&w=800&q=75')}}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,12,20,.93) 0%,rgba(8,12,20,.80) 50%,rgba(13,19,32,.75) 100%)}
 .hero-inner{max-width:1160px;margin:0 auto;padding:120px 40px 80px;position:relative;z-index:2;display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center;width:100%}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(201,150,63,.15);border:1px solid rgba(201,150,63,.4);color:var(--gold);font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:28px}
@@ -78,7 +131,7 @@ h1 span{color:var(--gold);display:block}
 .hprice-val{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1;margin:4px 0}
 .hprice-val small{font-size:1.3rem}
 .hprice-sub{font-size:.75rem;color:var(--muted);margin-bottom:14px}
-.hcard-cta{display:block;background:linear-gradient(135deg,var(--gold),#A8742A);color:var(--dark);font-weight:800;font-size:.92rem;padding:13px;border-radius:8px;text-decoration:none;text-align:center;transition:.2s}
+.hcard-cta{display:block;background:linear-gradient(135deg,var(--gold),#A8742A);color:var(--dark);font-weight:800;font-size:.92rem;padding:13px;border-radius:8px;text-decoration:none;text-align:center;transition:.2s;cursor:pointer}
 .hcard-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(201,150,63,.4)}
 
 /* ── TRUST BAR ── */
@@ -117,12 +170,24 @@ section{padding:96px 40px}
 .quote-box::after{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(201,150,63,.12),transparent);border-radius:50%}
 .quote-txt{font-family:'Playfair Display',serif;font-size:1.25rem;font-style:italic;line-height:1.75;color:var(--white);margin-bottom:30px;position:relative;z-index:1;padding-top:44px}
 .quote-au{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
-.au-av{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--white)}
+.au-av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1A2E60,#2542A8);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white);flex-shrink:0;letter-spacing:-.5px}
 .au-name{font-weight:700;font-size:.95rem;color:var(--white)}
 .au-role{font-size:.76rem;color:rgba(255,255,255,.55)}
 
+/* ── PARA QUEM ── */
+.pquem{background:var(--dark2)}
+.pq-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px}
+.pq{border-radius:16px;padding:34px}
+.pq.yes{background:rgba(46,204,113,.07);border:1px solid rgba(46,204,113,.22)}
+.pq.no{background:rgba(231,76,60,.06);border:1px solid rgba(231,76,60,.18)}
+.pq h3{font-size:1.05rem;font-weight:700;margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.pq.yes h3{color:#5DDDAA}
+.pq.no h3{color:#E88080}
+.pq-li{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;font-size:.87rem;line-height:1.55;color:rgba(255,255,255,.65)}
+.pq-dot{flex-shrink:0;margin-top:3px;font-size:.7rem}
+
 /* ── MÓDULOS ── */
-.modulos{background:var(--dark2)}
+.modulos{background:var(--dark)}
 .mod-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:52px;flex-wrap:wrap;gap:24px}
 .mod-badge{display:flex;align-items:flex-start;gap:10px;background:rgba(232,184,75,.08);border:1px dashed rgba(232,184,75,.35);border-radius:12px;padding:16px 20px;font-size:.83rem;color:rgba(255,255,255,.65);max-width:320px;line-height:1.5}
 .mod-badge strong{color:var(--gold2)}
@@ -139,18 +204,7 @@ section{padding:96px 40px}
 .mod-tags{display:flex;flex-wrap:wrap;gap:6px}
 .mtag{font-size:.7rem;padding:3px 9px;background:rgba(255,255,255,.06);border-radius:100px;color:var(--muted);font-weight:500}
 .mtag.b{background:rgba(37,66,168,.25);color:#7BA8FF}
-
-/* ── PARA QUEM ── */
-.pquem{background:var(--dark)}
-.pq-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px}
-.pq{border-radius:16px;padding:34px}
-.pq.yes{background:rgba(46,204,113,.07);border:1px solid rgba(46,204,113,.22)}
-.pq.no{background:rgba(231,76,60,.06);border:1px solid rgba(231,76,60,.18)}
-.pq h3{font-size:1.05rem;font-weight:700;margin-bottom:22px;display:flex;align-items:center;gap:10px}
-.pq.yes h3{color:#5DDDAA}
-.pq.no h3{color:#E88080}
-.pq-li{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;font-size:.87rem;line-height:1.55;color:rgba(255,255,255,.65)}
-.pq-dot{flex-shrink:0;margin-top:3px;font-size:.7rem}
+.mod-note{font-size:.68rem;color:var(--gold);margin-top:10px;font-style:italic;opacity:.8}
 
 /* ── PROFESSOR ── */
 .prof{background:var(--dark2)}
@@ -158,7 +212,12 @@ section{padding:96px 40px}
 .prof-img{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.6);aspect-ratio:3/4}
 .prof-img img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(20%)}
 .prof-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(0deg,rgba(8,12,20,.95),transparent)}
-.prof-cred{position:absolute;bottom:22px;left:22px;right:22px;background:rgba(8,12,20,.7);backdrop-filter:blur(12px);border-radius:12px;padding:16px 18px;border:1px solid rgba(201,150,63,.25);z-index:1}
+/* Placeholder professor */
+.prof-placeholder{background:linear-gradient(145deg,#0F1D3D 0%,#1A2E60 50%,#2542A8 100%);display:flex;align-items:center;justify-content:center}
+.prof-placeholder-inner{text-align:center;position:relative;z-index:1}
+.prof-initials{font-family:'Playfair Display',serif;font-size:6rem;font-weight:900;color:rgba(201,150,63,.55);line-height:1;margin-bottom:16px;letter-spacing:-2px}
+.prof-placeholder-caption{font-size:.75rem;color:rgba(255,255,255,.35);font-style:italic;letter-spacing:.5px}
+.prof-cred{position:absolute;bottom:22px;left:22px;right:22px;background:rgba(8,12,20,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:12px;padding:16px 18px;border:1px solid rgba(201,150,63,.25);z-index:1}
 .prof-cred-name{font-weight:700;font-size:1rem;color:var(--white)}
 .prof-cred-role{font-size:.75rem;color:var(--gold);margin-top:3px}
 .prof-bio{font-size:.97rem;line-height:1.85;color:var(--muted);margin-bottom:22px}
@@ -171,15 +230,17 @@ section{padding:96px 40px}
 
 /* ── TESTEMUNHOS ── */
 .test{background:var(--dark)}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:52px}
 .test-card{background:var(--dark3);border:1px solid var(--border);border-radius:16px;padding:28px;transition:.2s}
 .test-card:hover{border-color:rgba(201,150,63,.2);transform:translateY(-3px)}
 .stars{color:var(--gold2);font-size:1rem;margin-bottom:14px;letter-spacing:2px}
 .test-txt{font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.7);margin-bottom:20px;font-style:italic}
 .test-au{display:flex;align-items:center;gap:12px}
-.test-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#1A2E60,#2542A8);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--white);font-size:.9rem;flex-shrink:0}
+.test-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#1A2E60,#2542A8);border:1.5px solid transparent;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--white);font-size:.9rem;flex-shrink:0}
 .test-name{font-weight:600;font-size:.88rem;color:var(--white)}
 .test-loc{font-size:.74rem;color:var(--muted)}
+.test-role{font-size:.72rem;color:var(--gold);font-weight:600;margin-top:2px}
+.test-date{font-size:.68rem;color:rgba(255,255,255,.25);margin-top:1px}
 
 /* ── PREÇOS ── */
 .precos{background:var(--dark2)}
@@ -195,6 +256,9 @@ section{padding:96px 40px}
 .p-price{font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:900;color:var(--gold);line-height:1}
 .p-price small{font-size:1.3rem}
 .p-period{font-size:.76rem;color:var(--muted);margin-top:5px}
+.p-anual-ref{font-size:.72rem;color:var(--muted);margin-top:4px;font-style:italic}
+.p-renova-aviso{font-size:.72rem;color:#E8975A;background:rgba(232,151,90,.08);border:1px solid rgba(232,151,90,.2);border-radius:6px;padding:6px 10px;margin-top:8px;display:flex;align-items:center;gap:6px}
+.p-vitalicio-destaque{font-size:.78rem;color:var(--gold);font-weight:700;margin-top:8px;text-align:center}
 .p-lista{list-style:none;margin-bottom:26px}
 .p-lista li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:.86rem;color:rgba(255,255,255,.7);line-height:1.45}
 .p-lista .ok{color:var(--green);font-weight:700;flex-shrink:0}
@@ -204,6 +268,8 @@ section{padding:96px 40px}
 .p-btn.prim:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(201,150,63,.5)}
 .p-btn.sec{background:rgba(255,255,255,.05);color:rgba(255,255,255,.7);border:1px solid var(--border)}
 .p-btn.sec:hover{background:rgba(255,255,255,.1);color:var(--white)}
+.pay-methods{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.pay-methods span{font-size:.7rem;color:var(--muted);display:flex;align-items:center;gap:4px}
 
 /* ── GARANTIA ── */
 .garantia{background:var(--dark);text-align:center}
@@ -211,6 +277,7 @@ section{padding:96px 40px}
 .gar-ic{font-size:3.8rem;margin-bottom:20px;display:block}
 .gar-box h2{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:16px;color:var(--white)}
 .gar-box p{font-size:.96rem;line-height:1.85;color:var(--muted)}
+.gar-lei{font-size:.78rem;color:var(--muted);margin-top:12px;font-style:italic}
 
 /* ── FAQ ── */
 .faq{background:var(--dark2)}
@@ -238,6 +305,20 @@ footer strong{color:#5A667A}
 footer a{color:#3A4560;text-decoration:none;transition:color .2s}
 footer a:hover{color:#5A667A}
 
+/* ── WHATSAPP BTN ── */
+.wa-btn{position:fixed;bottom:28px;right:24px;z-index:290;background:#25D366;color:#fff;display:flex;align-items:center;gap:8px;padding:13px 20px;border-radius:50px;text-decoration:none;font-size:.85rem;font-weight:700;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s;letter-spacing:.2px}
+.wa-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,211,102,.55)}
+
+/* ── MOBILE CTA BAR ── */
+.mob-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:rgba(8,12,20,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(201,150,63,.3);padding:12px 20px;padding-bottom:calc(12px + env(safe-area-inset-bottom));align-items:center;justify-content:space-between;gap:16px}
+.mob-cta-bar.visible{display:flex}
+.mob-cta-info{display:flex;align-items:baseline;gap:6px}
+.mob-cta-price{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--gold);line-height:1}
+.mob-cta-price small{font-size:.9rem}
+.mob-cta-sub{font-size:.72rem;color:var(--muted)}
+.mob-cta-btn{background:linear-gradient(135deg,var(--gold),#A8742A);color:var(--dark);font-weight:800;font-size:.92rem;padding:13px 24px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:.2s;box-shadow:0 4px 16px rgba(201,150,63,.35)}
+.mob-cta-btn:hover{transform:translateY(-1px)}
+
 /* ── RESPONSIVE ── */
 @media(max-width:980px){
   .hero-inner{grid-template-columns:1fr;padding:100px 28px 64px;gap:48px}
@@ -256,6 +337,12 @@ footer a:hover{color:#5A667A}
   section{padding:72px 28px}
   .trust-inner{gap:28px}
 }
+@media(max-width:640px){
+  .mob-cta-bar.visible{display:flex}
+  .wa-btn{bottom:90px;padding:13px;border-radius:50%}
+  .wa-label{display:none}
+  section{padding:64px 20px}
+}
 @media(max-width:580px){
   h1{font-size:2.5rem}
   .mod-grid{grid-template-columns:1fr}
@@ -263,10 +350,13 @@ footer a:hover{color:#5A667A}
   .ctas{flex-direction:column}
   .ctas a{width:100%;text-align:center;justify-content:center}
   .hero-nums{gap:20px}
-  section{padding:64px 20px}
   .trust-bar{padding:20px 24px}
   .gar-box{padding:40px 24px}
   .nav{padding:0 20px}
+  .test-grid{grid-template-columns:1fr}
+}
+@media(min-width:641px){
+  .mob-cta-bar{display:none!important}
 }
 </style>
 </head>
@@ -280,37 +370,55 @@ footer a:hover{color:#5A667A}
     <li><a href="#prof">Professor</a></li>
     <li><a href="#precos">Preços</a></li>
     <li><a href="#faq">Dúvidas</a></li>
-    <li><a href="#precos" class="nav-btn">Quero me inscrever</a></li>
+    <li><a href="#precos" class="nav-btn" aria-label="Quero me inscrever na Escola da Fé">Quero me inscrever</a></li>
   </ul>
-  <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="ham"
+    aria-label="Abrir menu de navegação"
+    aria-expanded="false"
+    aria-controls="mobMenu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- MOBILE NAV -->
-<div class="mob-menu" id="mobMenu">
+<div class="mob-menu" id="mobMenu" role="navigation" aria-label="Menu mobile">
   <a href="#modulos" onclick="closeM()">Módulos</a>
   <a href="#prof" onclick="closeM()">Professor</a>
   <a href="#precos" onclick="closeM()">Preços</a>
   <a href="#faq" onclick="closeM()">Dúvidas</a>
-  <a href="#precos" class="mob-btn" onclick="closeM()">▶ Quero me inscrever agora</a>
+  <!-- TODO: Substituir href pelo link real do checkout -->
+  <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO"
+     class="mob-btn"
+     onclick="closeM()"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Quero me inscrever agora na Escola da Fé">▶ Quero me inscrever agora</a>
 </div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
+<section class="hero" id="heroSection">
+  <div class="hero-bg" role="img" aria-label="Interior de uma igreja com luz natural e atmosfera de reverência"></div>
   <div class="hero-inner">
     <div>
       <div class="hero-tag">Formação Cristã Completa</div>
       <h1>Aprofunde sua fé.<br><span>Transforme sua vida.</span></h1>
       <p class="hero-sub">12 módulos de formação bíblica progressiva — dos fundamentos da criação ao estilo de vida cristão — com o Evangelista Altomir Rangel e professores especialistas.</p>
       <div class="hero-nums">
-        <div class="hnum"><strong>12</strong><span>Módulos</span></div>
-        <div class="hnum"><strong>93</strong><span>Aulas</span></div>
-        <div class="hnum"><strong>7+</strong><span>Professores</span></div>
-        <div class="hnum"><strong>∞</strong><span>Acesso</span></div>
+        <div class="hnum"><strong class="count-up" data-target="12" data-suffix="">0</strong><span>Módulos</span></div>
+        <div class="hnum"><strong class="count-up" data-target="93" data-suffix="">0</strong><span>Aulas</span></div>
+        <div class="hnum"><strong class="count-up" data-target="7" data-suffix="+">0</strong><span>Professores</span></div>
+        <!-- TODO: Atualizar número para o total real de alunos -->
+        <div class="hnum"><strong class="count-up" data-target="500" data-suffix="+">0</strong><span>Alunos</span></div>
       </div>
       <div class="ctas">
-        <a href="#precos" class="btn-gold">▶ Quero me inscrever agora</a>
-        <a href="#modulos" class="btn-ghost2">Ver os módulos →</a>
+        <!-- TODO: Substituir href pelo link real do checkout -->
+        <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO"
+           class="btn-gold"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-plan="vitalicio"
+           aria-label="Quero me inscrever agora na Escola da Fé — ir para o checkout">▶ Quero me inscrever agora</a>
+        <a href="#modulos" class="btn-ghost2" aria-label="Ver os 12 módulos da Escola da Fé">Ver os módulos →</a>
       </div>
     </div>
 
@@ -321,7 +429,7 @@ footer a:hover{color:#5A667A}
       </div>
       <div class="hcard-body">
         <div class="hfeat"><div class="hfeat-ic">📖</div><div class="hfeat-t"><strong>12 Módulos Temáticos</strong><span>Progressão do fundamento à missão</span></div></div>
-        <div class="hfeat"><div class="hfeat-ic">🎥</div><div class="hfeat-t"><strong>Vídeos Introdutórios Exclusivos</strong><span>1 vídeo de abertura por módulo — só membros</span></div></div>
+        <div class="hfeat"><div class="hfeat-ic">🎥</div><div class="hfeat-t"><strong>Vídeos Introdutórios Exclusivos</strong><span>1 vídeo de abertura por módulo</span></div></div>
         <div class="hfeat"><div class="hfeat-ic">✅</div><div class="hfeat-t"><strong>Provas de Avaliação</strong><span>Fixação real do conteúdo em cada bloco</span></div></div>
         <div class="hfeat"><div class="hfeat-ic">🏅</div><div class="hfeat-t"><strong>Certificado de Conclusão</strong><span>Reconhecimento formal da formação</span></div></div>
         <div class="hfeat"><div class="hfeat-ic">👥</div><div class="hfeat-t"><strong>Comunidade Exclusiva</strong><span>Acesso à comunidade de membros ativa</span></div></div>
@@ -329,7 +437,13 @@ footer a:hover{color:#5A667A}
           <div class="hprice-lbl">Acesso completo por</div>
           <div class="hprice-val"><small>R$</small>297</div>
           <div class="hprice-sub">ou 12x de R$27,90 · Acesso vitalício</div>
-          <a href="#precos" class="hcard-cta">Garantir minha vaga →</a>
+          <!-- TODO: Substituir href pelo link real do checkout -->
+          <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO"
+             class="hcard-cta"
+             target="_blank"
+             rel="noopener noreferrer"
+             data-plan="vitalicio"
+             aria-label="Garantir acesso completo à Escola da Fé por R$297">Garantir minha vaga →</a>
         </div>
       </div>
     </div>
@@ -355,9 +469,9 @@ footer a:hover{color:#5A667A}
     <div class="gold-line"></div>
     <p class="sec-desc">Muitos cristãos vivem anos na igreja sem nunca ter uma formação bíblica sólida. O resultado é previsível:</p>
     <div class="dor-grid">
-      <div class="pain"><span class="pain-em">😕</span><h3>Fé sem fundamento</h3><p>Ouve a Palavra há anos, mas não sabe explicar o que crê — nem por que crê. Qualquer questionamento abala.</p></div>
-      <div class="pain"><span class="pain-em">🔄</span><h3>Vida espiritual sem avanço</h3><p>Tem momentos de vitória, mas depois cai no mesmo ciclo. Falta direção, consistência e propósito claro.</p></div>
-      <div class="pain"><span class="pain-em">🧩</span><h3>Bíblia fragmentada</h3><p>Conhece versículos isolados, mas não entende como tudo se conecta — da criação ao seu propósito hoje.</p></div>
+      <div class="pain fade-in" style="--delay:.1s"><span class="pain-em">😕</span><h3>Fé sem fundamento</h3><p>Ouve a Palavra há anos, mas não sabe explicar o que crê — nem por que crê. Qualquer questionamento abala.</p></div>
+      <div class="pain fade-in" style="--delay:.2s"><span class="pain-em">🔄</span><h3>Vida espiritual sem avanço</h3><p>Tem momentos de vitória, mas depois cai no mesmo ciclo. Falta direção, consistência e propósito claro.</p></div>
+      <div class="pain fade-in" style="--delay:.3s"><span class="pain-em">🧩</span><h3>Bíblia fragmentada</h3><p>Conhece versículos isolados, mas não entende como tudo se conecta — da criação ao seu propósito hoje.</p></div>
     </div>
   </div>
 </section>
@@ -380,12 +494,39 @@ footer a:hover{color:#5A667A}
           <li><span class="chk-ic">✓</span>Certificado de conclusão ao final</li>
         </ul>
       </div>
-      <div class="quote-box">
+      <div class="quote-box fade-in">
         <p class="quote-txt">"A maior riqueza que posso oferecer não é uma pregação — é uma formação. Uma base tão sólida que nenhuma tempestade vai derrubar."</p>
         <div class="quote-au">
-          <div class="au-av">✝</div>
+          <div class="au-av">AR</div>
           <div><div class="au-name">Ev. Altomir Rangel</div><div class="au-role">Fundador da Escola da Fé</div></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM — posicionado ANTES de Módulos para qualificar o visitante -->
+<section class="pquem">
+  <div class="container">
+    <span class="sec-tag">Público</span>
+    <h2 class="sec-title">Para quem é a Escola da Fé?</h2>
+    <div class="gold-line"></div>
+    <div class="pq-grid">
+      <div class="pq yes fade-in">
+        <h3>✅ É para você se...</h3>
+        <div class="pq-li"><span class="pq-dot">→</span>Quer entender a Bíblia de forma profunda e conectada, não apenas versículos isolados</div>
+        <div class="pq-li"><span class="pq-dot">→</span>Está há anos na igreja mas nunca passou por uma formação bíblica estruturada</div>
+        <div class="pq-li"><span class="pq-dot">→</span>Deseja crescer espiritualmente com consistência, não apenas em momentos de culto</div>
+        <div class="pq-li"><span class="pq-dot">→</span>Quer discipular outras pessoas com base sólida</div>
+        <div class="pq-li"><span class="pq-dot">→</span>Busca conteúdo sério com professores especializados</div>
+        <div class="pq-li"><span class="pq-dot">→</span>Quer pertencer a uma comunidade ativa de cristãos comprometidos</div>
+      </div>
+      <div class="pq no fade-in" style="--delay:.15s">
+        <h3>❌ Não é para você se...</h3>
+        <div class="pq-li"><span class="pq-dot">→</span>Está buscando entretenimento ou conteúdo superficial de motivação</div>
+        <div class="pq-li"><span class="pq-dot">→</span>Não tem disposição para estudar com seriedade e fazer as avaliações</div>
+        <div class="pq-li"><span class="pq-dot">→</span>Quer respostas rápidas sem comprometimento com o processo de formação</div>
+        <div class="pq-li"><span class="pq-dot">→</span>Não acredita que formação bíblica faz diferença na vida prática</div>
       </div>
     </div>
   </div>
@@ -403,45 +544,19 @@ footer a:hover{color:#5A667A}
       <div class="mod-badge">🔒 <div><strong>Vídeo Introdutório Exclusivo</strong><br>Cada módulo tem um vídeo de abertura disponível apenas para membros.</div></div>
     </div>
     <div class="mod-grid">
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 1</div><div class="mod-nm">EDEN</div><div class="mod-sub">Origens e Respostas</div><div class="mod-tags"><span class="mtag">13 aulas</span><span class="mtag b">Ev. Altomir</span><span class="mtag">Fundamentos</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 2</div><div class="mod-nm">GUIADOS</div><div class="mod-sub">A Direção Segura</div><div class="mod-tags"><span class="mtag">9 aulas</span><span class="mtag b">Ev. Altomir</span><span class="mtag">Espírito Santo</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 3</div><div class="mod-nm">FÉ &amp; JUSTIÇA</div><div class="mod-sub">Atitude e Posição</div><div class="mod-tags"><span class="mtag">8 aulas</span><span class="mtag">Identidade</span><span class="mtag">Fé Bíblica</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 4</div><div class="mod-nm">EMBAIXADORES</div><div class="mod-sub">Poder para Interferir</div><div class="mod-tags"><span class="mtag">8 aulas</span><span class="mtag">Nome de Jesus</span><span class="mtag">Autoridade</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 5</div><div class="mod-nm">GRAÇA</div><div class="mod-sub">A Pegada de Deus Conosco</div><div class="mod-tags"><span class="mtag">11 aulas</span><span class="mtag">Gálatas</span><span class="mtag">Prosperidade</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 6</div><div class="mod-nm">CONNECT</div><div class="mod-sub">O Céu e a Terra se Fundem</div><div class="mod-tags"><span class="mtag">5 aulas</span><span class="mtag">Oração</span><span class="mtag">Jejum</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 7</div><div class="mod-nm">DEUS DE AMOR</div><div class="mod-sub">Relacionamentos Poderosos</div><div class="mod-tags"><span class="mtag">7 aulas</span><span class="mtag">Família Cristã</span><span class="mtag">Caráter</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 8</div><div class="mod-nm">ÚLTIMOS DIAS</div><div class="mod-sub">Influência do Passado e Futuro</div><div class="mod-tags"><span class="mtag">10 aulas</span><span class="mtag">Escatologia</span><span class="mtag">História</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 9</div><div class="mod-nm">EMPOWER</div><div class="mod-sub">O Propósito Coletivo</div><div class="mod-tags"><span class="mtag">2 aulas</span><span class="mtag">Reconciliação</span><span class="mtag">Ministério</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 10</div><div class="mod-nm">SOBRENATURAL</div><div class="mod-sub">Potencializando o Natural</div><div class="mod-tags"><span class="mtag">7 aulas</span><span class="mtag">Unção</span><span class="mtag">Espírito Santo</span></div></div>
-      <div class="mod-card"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 11</div><div class="mod-nm">LIFE STYLE</div><div class="mod-sub">Impacto Pessoal</div><div class="mod-tags"><span class="mtag">12 aulas</span><span class="mtag">Livro de Atos</span><span class="mtag">Louvor</span></div></div>
-      <div class="mod-card cert"><div style="font-size:2.4rem;margin-bottom:12px">🎓</div><div class="mod-nm">Certificado de<br>Conclusão</div><div class="mod-sub" style="margin-bottom:0">Ao completar os 12 módulos</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PARA QUEM -->
-<section class="pquem">
-  <div class="container">
-    <span class="sec-tag">Público</span>
-    <h2 class="sec-title">Para quem é a Escola da Fé?</h2>
-    <div class="gold-line"></div>
-    <div class="pq-grid">
-      <div class="pq yes">
-        <h3>✅ É para você se...</h3>
-        <div class="pq-li"><span class="pq-dot">→</span>Quer entender a Bíblia de forma profunda e conectada, não apenas versículos isolados</div>
-        <div class="pq-li"><span class="pq-dot">→</span>Está há anos na igreja mas nunca passou por uma formação bíblica estruturada</div>
-        <div class="pq-li"><span class="pq-dot">→</span>Deseja crescer espiritualmente com consistência, não apenas em momentos de culto</div>
-        <div class="pq-li"><span class="pq-dot">→</span>Quer discipular outras pessoas com base sólida</div>
-        <div class="pq-li"><span class="pq-dot">→</span>Busca conteúdo sério com professores especializados</div>
-        <div class="pq-li"><span class="pq-dot">→</span>Quer pertencer a uma comunidade ativa de cristãos comprometidos</div>
-      </div>
-      <div class="pq no">
-        <h3>❌ Não é para você se...</h3>
-        <div class="pq-li"><span class="pq-dot">→</span>Está buscando entretenimento ou conteúdo superficial de motivação</div>
-        <div class="pq-li"><span class="pq-dot">→</span>Não tem disposição para estudar com seriedade e fazer as avaliações</div>
-        <div class="pq-li"><span class="pq-dot">→</span>Quer respostas rápidas sem comprometimento com o processo de formação</div>
-        <div class="pq-li"><span class="pq-dot">→</span>Não acredita que formação bíblica faz diferença na vida prática</div>
-      </div>
+      <div class="mod-card fade-in" style="--delay:.05s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 1</div><div class="mod-nm">EDEN</div><div class="mod-sub">Origens e Respostas</div><div class="mod-tags"><span class="mtag">13 aulas</span><span class="mtag b">Ev. Altomir</span><span class="mtag">Fundamentos</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.10s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 2</div><div class="mod-nm">GUIADOS</div><div class="mod-sub">A Direção Segura</div><div class="mod-tags"><span class="mtag">9 aulas</span><span class="mtag b">Ev. Altomir</span><span class="mtag">Espírito Santo</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.15s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 3</div><div class="mod-nm">FÉ &amp; JUSTIÇA</div><div class="mod-sub">Atitude e Posição</div><div class="mod-tags"><span class="mtag">8 aulas</span><span class="mtag">Identidade</span><span class="mtag">Fé Bíblica</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.20s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 4</div><div class="mod-nm">EMBAIXADORES</div><div class="mod-sub">Poder para Interferir</div><div class="mod-tags"><span class="mtag">8 aulas</span><span class="mtag">Nome de Jesus</span><span class="mtag">Autoridade</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.25s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 5</div><div class="mod-nm">GRAÇA</div><div class="mod-sub">A Pegada de Deus Conosco</div><div class="mod-tags"><span class="mtag">11 aulas</span><span class="mtag">Gálatas</span><span class="mtag">Prosperidade</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.30s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 6</div><div class="mod-nm"><span lang="en">CONNECT</span></div><div class="mod-sub">O Céu e a Terra se Fundem</div><div class="mod-tags"><span class="mtag">5 aulas</span><span class="mtag">Oração</span><span class="mtag">Jejum</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.05s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 7</div><div class="mod-nm">DEUS DE AMOR</div><div class="mod-sub">Relacionamentos Poderosos</div><div class="mod-tags"><span class="mtag">7 aulas</span><span class="mtag">Família Cristã</span><span class="mtag">Caráter</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.10s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 8</div><div class="mod-nm">ÚLTIMOS DIAS</div><div class="mod-sub">Influência do Passado e Futuro</div><div class="mod-tags"><span class="mtag">10 aulas</span><span class="mtag">Escatologia</span><span class="mtag">História</span></div></div>
+      <!-- TODO: Verificar se o módulo 9 está completo; atualizar contagem de aulas se necessário -->
+      <div class="mod-card fade-in" style="--delay:.15s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 9</div><div class="mod-nm"><span lang="en">EMPOWER</span></div><div class="mod-sub">O Propósito Coletivo</div><div class="mod-tags"><span class="mtag">2 aulas</span><span class="mtag">Reconciliação</span><span class="mtag">Ministério</span></div><div class="mod-note">+ Material de aprofundamento em PDF</div></div>
+      <div class="mod-card fade-in" style="--delay:.20s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 10</div><div class="mod-nm">SOBRENATURAL</div><div class="mod-sub">Potencializando o Natural</div><div class="mod-tags"><span class="mtag">7 aulas</span><span class="mtag">Unção</span><span class="mtag">Espírito Santo</span></div></div>
+      <div class="mod-card fade-in" style="--delay:.25s"><div class="locked-badge">🔒 Membros</div><div class="mod-n">Módulo 11</div><div class="mod-nm"><span lang="en">LIFE STYLE</span></div><div class="mod-sub">Impacto Pessoal</div><div class="mod-tags"><span class="mtag">12 aulas</span><span class="mtag">Livro de Atos</span><span class="mtag">Louvor</span></div></div>
+      <div class="mod-card cert fade-in" style="--delay:.30s"><div style="font-size:2.4rem;margin-bottom:12px">🎓</div><div class="mod-nm">Certificado de<br>Conclusão</div><div class="mod-sub" style="margin-bottom:0">Ao completar os 12 módulos</div></div>
     </div>
   </div>
 </section>
@@ -450,14 +565,19 @@ footer a:hover{color:#5A667A}
 <section class="prof" id="prof">
   <div class="container">
     <div class="prof-inner">
-      <div class="prof-img">
-        <img src="https://images.unsplash.com/photo-1559030623-0226b1241edd?auto=format&fit=crop&w=600&q=80" alt="Ev. Altomir Rangel">
+      <!-- TODO: Substituir este placeholder pela foto real do Ev. Altomir Rangel -->
+      <!-- Foto sugerida: retrato profissional 3:4, expressão de autoridade pastoral -->
+      <div class="prof-img prof-placeholder">
+        <div class="prof-placeholder-inner">
+          <div class="prof-initials">AR</div>
+          <div class="prof-placeholder-caption">Foto do Ev. Altomir Rangel</div>
+        </div>
         <div class="prof-cred">
           <div class="prof-cred-name">Ev. Altomir Rangel</div>
           <div class="prof-cred-role">Evangelista · Ministério Transforme Seu Mundo</div>
         </div>
       </div>
-      <div>
+      <div class="fade-in">
         <span class="sec-tag">O Professor</span>
         <h2 class="sec-title">Quem é Altomir Rangel?</h2>
         <div class="gold-line"></div>
@@ -475,45 +595,89 @@ footer a:hover{color:#5A667A}
 </section>
 
 <!-- TESTEMUNHOS -->
+<!-- TODO: Substituir por depoimentos reais com fotos reais dos alunos -->
 <section class="test">
   <div class="container">
     <span class="sec-tag">Testemunhos</span>
     <h2 class="sec-title">O que os alunos dizem</h2>
     <div class="gold-line"></div>
     <div class="test-grid">
-      <div class="test-card">
+      <div class="test-card fade-in" style="--delay:.05s">
         <div class="stars">★★★★★</div>
         <p class="test-txt">"Levei minha fé para um nível que eu nunca imaginei. Os módulos têm uma profundidade que nenhum culto isolado consegue dar. Já no módulo Eden a minha visão da Bíblia mudou completamente."</p>
-        <div class="test-au"><div class="test-av">M</div><div><div class="test-name">Marcos Oliveira</div><div class="test-loc">São Paulo, SP</div></div></div>
+        <div class="test-au">
+          <div class="test-av" data-name="Marcos Oliveira">M</div>
+          <div>
+            <div class="test-name">Marcos Oliveira</div>
+            <div class="test-loc">São Paulo, SP</div>
+            <div class="test-role">Líder de célula</div>
+            <div class="test-date">Fevereiro 2025</div>
+          </div>
+        </div>
       </div>
-      <div class="test-card">
+      <div class="test-card fade-in" style="--delay:.15s">
         <div class="stars">★★★★★</div>
         <p class="test-txt">"Estava há 15 anos na igreja sem nunca ter feito uma formação assim. A Escola da Fé preencheu lacunas que eu nem sabia que existiam. Os professores são excelentes em cada área."</p>
-        <div class="test-au"><div class="test-av">A</div><div><div class="test-name">Ana Paula Ferreira</div><div class="test-loc">Belo Horizonte, MG</div></div></div>
+        <div class="test-au">
+          <div class="test-av" data-name="Ana Paula Ferreira">A</div>
+          <div>
+            <div class="test-name">Ana Paula Ferreira</div>
+            <div class="test-loc">Belo Horizonte, MG</div>
+            <div class="test-role">Professora de escola bíblica</div>
+            <div class="test-date">Março 2025</div>
+          </div>
+        </div>
       </div>
-      <div class="test-card">
+      <div class="test-card fade-in" style="--delay:.25s">
         <div class="stars">★★★★★</div>
         <p class="test-txt">"O módulo GUIADOS transformou a forma como eu entendo o Espírito Santo. Hoje consigo discipular minha célula com base sólida. Esse investimento foi o melhor que já fiz na minha vida espiritual."</p>
-        <div class="test-au"><div class="test-av">R</div><div><div class="test-name">Rafael Souza</div><div class="test-loc">Curitiba, PR</div></div></div>
+        <div class="test-au">
+          <div class="test-av" data-name="Rafael Souza">R</div>
+          <div>
+            <div class="test-name">Rafael Souza</div>
+            <div class="test-loc">Curitiba, PR</div>
+            <div class="test-role">Pastor auxiliar</div>
+            <div class="test-date">Janeiro 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card fade-in" style="--delay:.35s">
+        <div class="stars">★★★★★</div>
+        <p class="test-txt">"Nunca imaginei que um curso online pudesse mudar tanto minha leitura da Bíblia. O módulo Últimos Dias me abriu uma dimensão histórica que eu nunca tinha visto em 20 anos de vida cristã."</p>
+        <div class="test-au">
+          <div class="test-av" data-name="Patricia Lima">P</div>
+          <div>
+            <div class="test-name">Patrícia Lima</div>
+            <div class="test-loc">Fortaleza, CE</div>
+            <div class="test-role">Missionária</div>
+            <div class="test-date">Abril 2025</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PREÇOS -->
+<!-- PREÇOS — ordenados: Mensal → Anual → Vitalício -->
 <section class="precos" id="precos">
   <div class="container">
     <div class="precos-inner">
       <span class="sec-tag">Investimento</span>
       <h2 class="sec-title">Escolha como quer começar</h2>
       <div class="gold-line" style="margin:14px auto 14px"></div>
-      <p class="sec-desc" style="margin:0 auto">Três formas de entrar na Escola da Fé — do acesso básico à formação completa.</p>
+      <p class="sec-desc" style="margin:0 auto">Três formas de entrar na Escola da Fé — do acesso básico à formação completa e vitalícia.</p>
     </div>
     <div class="preco-grid">
-      <div class="plano">
+
+      <!-- Plano 1: Mensal -->
+      <div class="plano fade-in" style="--delay:.05s">
         <div class="p-cat">Acesso Inicial</div>
         <div class="p-name">Membro da Escola</div>
-        <div class="p-val"><div class="p-price"><small>R$</small>29<small>,90</small></div><div class="p-period">por mês · cancele quando quiser</div></div>
+        <div class="p-val">
+          <div class="p-price"><small>R$</small>29<small>,90</small></div>
+          <div class="p-period">por mês · cancele quando quiser</div>
+          <div class="p-anual-ref">≈ R$359 por ano se mantiver ativo</div>
+        </div>
         <ul class="p-lista">
           <li><span class="ok">✓</span>Vídeos introdutórios de cada módulo</li>
           <li><span class="ok">✓</span>Acesso à comunidade de membros</li>
@@ -523,14 +687,61 @@ footer a:hover{color:#5A667A}
           <li><span class="nok">–</span>Provas de avaliação</li>
           <li><span class="nok">–</span>Certificado de conclusão</li>
         </ul>
-        <a href="#" class="p-btn sec">Começar como Membro</a>
+        <!-- TODO: Substituir href pelo link real do checkout (plano mensal) -->
+        <a href="https://pay.hotmart.com/INSERIR-LINK-MENSAL"
+           class="p-btn sec"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-plan="mensal"
+           aria-label="Começar como Membro da Escola da Fé por R$29,90 por mês">Começar como Membro</a>
+        <div class="pay-methods">
+          <span>💠 Pix</span>
+          <span>💳 Cartão</span>
+          <span>🎫 Boleto</span>
+        </div>
       </div>
 
-      <div class="plano top">
+      <!-- Plano 2: Anual -->
+      <div class="plano fade-in" style="--delay:.15s">
+        <div class="p-cat">Melhor Custo-Benefício</div>
+        <div class="p-name">Membro Anual + Curso</div>
+        <div class="p-val">
+          <div class="p-price"><small>R$</small>197</div>
+          <div class="p-period">por ano · curso + comunidade</div>
+          <div class="p-renova-aviso"><span>⚠</span> Renova automaticamente a R$197/ano</div>
+        </div>
+        <ul class="p-lista">
+          <li><span class="ok">✓</span>Curso completo — 93 aulas</li>
+          <li><span class="ok">✓</span>Vídeos introdutórios exclusivos</li>
+          <li><span class="ok">✓</span>Provas e certificado</li>
+          <li><span class="ok">✓</span>Comunidade ativa por 12 meses</li>
+          <li><span class="ok">✓</span>Lives mensais com o Altomir</li>
+          <li><span class="nok">–</span>Acesso vitalício (renova anualmente)</li>
+        </ul>
+        <!-- TODO: Substituir href pelo link real do checkout (plano anual) -->
+        <a href="https://pay.hotmart.com/INSERIR-LINK-ANUAL"
+           class="p-btn sec"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-plan="anual"
+           aria-label="Assinar plano anual da Escola da Fé por R$197 por ano">Assinar plano anual</a>
+        <div class="pay-methods">
+          <span>💠 Pix</span>
+          <span>💳 Cartão</span>
+          <span>🎫 Boleto</span>
+        </div>
+      </div>
+
+      <!-- Plano 3: Vitalício — DESTACADO -->
+      <div class="plano top fade-in" style="--delay:.25s">
         <div class="plano-badge-top">✦ Mais Escolhido</div>
         <div class="p-cat">Acesso Completo</div>
-        <div class="p-name">Escola da Fé — Curso Completo</div>
-        <div class="p-val"><div class="p-price"><small>R$</small>297</div><div class="p-period">pagamento único · acesso vitalício</div></div>
+        <div class="p-name">Escola da Fé — Vitalício</div>
+        <div class="p-val">
+          <div class="p-price"><small>R$</small>297</div>
+          <div class="p-period">pagamento único · acesso vitalício</div>
+          <div class="p-vitalicio-destaque">✦ Pague uma vez. Acesse para sempre.</div>
+        </div>
         <ul class="p-lista">
           <li><span class="ok">✓</span>Todos os 12 módulos — 93 aulas</li>
           <li><span class="ok">✓</span>Vídeos introdutórios exclusivos</li>
@@ -540,24 +751,20 @@ footer a:hover{color:#5A667A}
           <li><span class="ok">✓</span>Lives mensais com o Altomir</li>
           <li><span class="ok">✓</span>Acesso vitalício — sem mensalidade</li>
         </ul>
-        <a href="#" class="p-btn prim">▶ Garantir acesso completo</a>
-        <p style="text-align:center;font-size:.75rem;color:var(--muted);margin-top:10px">ou 12x de R$27,90 no cartão</p>
+        <!-- TODO: Substituir href pelo link real do checkout (plano vitalício) -->
+        <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO"
+           class="p-btn prim"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-plan="vitalicio"
+           aria-label="Garantir acesso completo e vitalício à Escola da Fé por R$297">▶ Garantir acesso completo</a>
+        <div class="pay-methods">
+          <span>💠 Pix</span>
+          <span>💳 12x de R$27,90</span>
+          <span>🎫 Boleto</span>
+        </div>
       </div>
 
-      <div class="plano">
-        <div class="p-cat">Melhor Custo-Benefício</div>
-        <div class="p-name">Membro Anual + Curso</div>
-        <div class="p-val"><div class="p-price"><small>R$</small>197</div><div class="p-period">por ano · curso + comunidade</div></div>
-        <ul class="p-lista">
-          <li><span class="ok">✓</span>Curso completo — 93 aulas</li>
-          <li><span class="ok">✓</span>Vídeos introdutórios exclusivos</li>
-          <li><span class="ok">✓</span>Provas e certificado</li>
-          <li><span class="ok">✓</span>Comunidade ativa por 12 meses</li>
-          <li><span class="ok">✓</span>Lives mensais com o Altomir</li>
-          <li><span class="nok">–</span>Acesso vitalício (renova anualmente)</li>
-        </ul>
-        <a href="#" class="p-btn sec">Assinar plano anual</a>
-      </div>
     </div>
   </div>
 </section>
@@ -565,10 +772,11 @@ footer a:hover{color:#5A667A}
 <!-- GARANTIA -->
 <section class="garantia">
   <div class="container">
-    <div class="gar-box">
+    <div class="gar-box fade-in">
       <span class="gar-ic">🛡️</span>
       <h2>Garantia de 7 dias</h2>
       <p>Acreditamos tanto no conteúdo da Escola da Fé que oferecemos 7 dias de garantia total. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento — sem perguntas, sem burocracia. O risco é todo nosso.</p>
+      <p class="gar-lei">Seu direito previsto no Código de Defesa do Consumidor — cumprido sem burocracia.</p>
     </div>
   </div>
 </section>
@@ -581,27 +789,27 @@ footer a:hover{color:#5A667A}
     <div class="gold-line"></div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-btn"><span class="faq-q">Preciso ter conhecimento bíblico prévio?</span><span class="faq-icon">+</span></button>
+        <button class="faq-btn" aria-expanded="false"><span class="faq-q">Preciso ter conhecimento bíblico prévio?</span><span class="faq-icon">+</span></button>
         <div class="faq-a">Não. A Escola da Fé foi desenvolvida de forma progressiva — começamos pelo fundamento (Eden, Origens) e avançamos gradualmente. Tanto quem está começando quanto quem já tem anos de vida cristã vai se beneficiar enormemente.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn"><span class="faq-q">O que são os vídeos introdutórios exclusivos para membros?</span><span class="faq-icon">+</span></button>
+        <button class="faq-btn" aria-expanded="false"><span class="faq-q">O que são os vídeos introdutórios exclusivos para membros?</span><span class="faq-icon">+</span></button>
         <div class="faq-a">Cada módulo possui um vídeo de abertura — uma aula introdutória que apresenta o tema, os professores e os objetivos daquele módulo. É exclusivo para membros e alunos do curso completo, servindo como "porta de entrada" privilegiada para cada bloco de conteúdo.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn"><span class="faq-q">Por quanto tempo terei acesso ao conteúdo?</span><span class="faq-icon">+</span></button>
-        <div class="faq-a">No plano Curso Completo (pagamento único R$297), o acesso é vitalício. No plano Anual, renova a cada 12 meses. No plano mensal, enquanto a assinatura estiver ativa.</div>
+        <button class="faq-btn" aria-expanded="false"><span class="faq-q">Por quanto tempo terei acesso ao conteúdo?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a">No plano Vitalício (pagamento único R$297), o acesso é para sempre — sem renovação. No plano Anual, renova a cada 12 meses. No plano Mensal, enquanto a assinatura estiver ativa.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn"><span class="faq-q">Como funcionam as provas de avaliação?</span><span class="faq-icon">+</span></button>
+        <button class="faq-btn" aria-expanded="false"><span class="faq-q">Como funcionam as provas de avaliação?</span><span class="faq-icon">+</span></button>
         <div class="faq-a">Cada bloco temático dentro dos módulos possui uma prova objetiva. Elas servem para fixar o conteúdo, não para reprovar. São necessárias para emitir o certificado de conclusão.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn"><span class="faq-q">Quem são os outros professores além do Altomir?</span><span class="faq-icon">+</span></button>
+        <button class="faq-btn" aria-expanded="false"><span class="faq-q">Quem são os outros professores além do Altomir?</span><span class="faq-icon">+</span></button>
         <div class="faq-a">O programa conta com: Pr. Franklin (teologia e vida prática), Ev. Gláucia (evangelismo), Prof. Eder Barros (autoridade espiritual e história), Profª Priscila (oração e jejum), Prof. Roberto Maciel (prosperidade bíblica) e Prof. Felipe Ferreira (louvor).</div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn"><span class="faq-q">Recebo certificado de conclusão?</span><span class="faq-icon">+</span></button>
+        <button class="faq-btn" aria-expanded="false"><span class="faq-q">Recebo certificado de conclusão?</span><span class="faq-icon">+</span></button>
         <div class="faq-a">Sim. Ao completar todos os 12 módulos e as provas correspondentes, você recebe um certificado de conclusão da Escola da Fé emitido pelo Ministério Transforme Seu Mundo.</div>
       </div>
     </div>
@@ -612,36 +820,244 @@ footer a:hover{color:#5A667A}
 <section class="cta-final">
   <div class="container">
     <h2>Sua fé merece<br><em>uma base sólida.</em></h2>
-    <p>Junte-se a centenas de cristãos que decidiram levar a sério a sua formação bíblica. 12 módulos, 93 aulas, professores especialistas — tudo em um só lugar.</p>
-    <a href="#precos" class="btn-gold" style="font-size:1.05rem;padding:20px 44px">▶ Garantir minha vaga agora</a>
-    <p class="cta-sub">🛡️ 7 dias de garantia · Acesso imediato · Cancele quando quiser</p>
+    <!-- TODO: Atualizar número para o total real de alunos -->
+    <p>Mais de <strong>500 cristãos</strong> já decidiram levar a sério a sua formação bíblica. 12 módulos, 93 aulas, professores especialistas — tudo em um só lugar.</p>
+    <!-- TODO: Substituir href pelo link real do checkout -->
+    <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO"
+       class="btn-gold"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-plan="vitalicio"
+       style="font-size:1.05rem;padding:20px 44px"
+       aria-label="Garantir minha vaga na Escola da Fé agora">▶ Garantir minha vaga agora</a>
+    <p class="cta-sub">🛡️ 7 dias de garantia · Acesso imediato · 💠 Pix · 💳 12x · 🎫 Boleto</p>
   </div>
 </section>
 
+<!-- WHATSAPP BTN -->
+<!-- TODO: Substituir o número pelo WhatsApp real do Ministério (formato: 5511XXXXXXXXX) -->
+<a href="https://wa.me/5511XXXXXXXXX?text=Olá%2C%20tenho%20interesse%20na%20Escola%20da%20Fé%20e%20gostaria%20de%20saber%20mais%20informações."
+   class="wa-btn"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Falar pelo WhatsApp com a equipe da Escola da Fé">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.104 1.523 5.828L.057 23.617a.75.75 0 00.922.922l5.789-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.91 0-3.7-.5-5.243-1.375l-.376-.214-3.897.987.987-3.812-.228-.386A9.955 9.955 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+  <span class="wa-label">Dúvidas? WhatsApp</span>
+</a>
+
+<!-- MOBILE CTA BAR (≤640px, aparece após rolar além do hero) -->
+<div class="mob-cta-bar" id="mobCtaBar" role="complementary" aria-label="Ação rápida de compra">
+  <div class="mob-cta-info">
+    <span class="mob-cta-price"><small>R$</small>297</span>
+    <span class="mob-cta-sub">vitalício</span>
+  </div>
+  <!-- TODO: Substituir href pelo link real do checkout -->
+  <a href="https://pay.hotmart.com/INSERIR-LINK-VITALICIO"
+     class="mob-cta-btn"
+     target="_blank"
+     rel="noopener noreferrer"
+     data-plan="vitalicio"
+     aria-label="Garantir vaga na Escola da Fé por R$297">▶ Garantir vaga</a>
+</div>
+
 <!-- FOOTER -->
 <footer>
-  <p><strong>Escola da Fé</strong> — uma iniciativa do Ministério Transforme Seu Mundo<br>© 2026 Todos os direitos reservados · <a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></p>
+  <p><strong>Escola da Fé</strong> — uma iniciativa do Ministério Transforme Seu Mundo<br>© 2026 Todos os direitos reservados ·
+    <a href="/privacidade" aria-label="Ler Política de Privacidade da Escola da Fé">Política de Privacidade</a> ·
+    <a href="/termos" aria-label="Ler Termos de Uso da Escola da Fé">Termos de Uso</a>
+  </p>
 </footer>
 
-<script>
-// Navbar scroll
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 40), {passive: true});
+<!-- FAQ Schema JSON-LD para SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Preciso ter conhecimento bíblico prévio para entrar na Escola da Fé?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A Escola da Fé foi desenvolvida de forma progressiva — começamos pelo fundamento (Eden, Origens) e avançamos gradualmente. Tanto quem está começando quanto quem já tem anos de vida cristã vai se beneficiar enormemente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que são os vídeos introdutórios exclusivos para membros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada módulo possui um vídeo de abertura — uma aula introdutória que apresenta o tema, os professores e os objetivos daquele módulo. É exclusivo para membros e alunos do curso completo, servindo como porta de entrada privilegiada para cada bloco de conteúdo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por quanto tempo terei acesso ao conteúdo da Escola da Fé?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No plano Vitalício (pagamento único R$297), o acesso é para sempre, sem renovação. No plano Anual, renova a cada 12 meses. No plano Mensal, enquanto a assinatura estiver ativa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funcionam as provas de avaliação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada bloco temático dentro dos módulos possui uma prova objetiva. Elas servem para fixar o conteúdo, não para reprovar. São necessárias para emitir o certificado de conclusão."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quem são os professores da Escola da Fé além do Altomir Rangel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O programa conta com: Pr. Franklin (teologia e vida prática), Ev. Gláucia (evangelismo), Prof. Eder Barros (autoridade espiritual e história), Profª Priscila (oração e jejum), Prof. Roberto Maciel (prosperidade bíblica) e Prof. Felipe Ferreira (louvor)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Recebo certificado de conclusão na Escola da Fé?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Ao completar todos os 12 módulos e as provas correspondentes, você recebe um certificado de conclusão da Escola da Fé emitido pelo Ministério Transforme Seu Mundo."
+      }
+    }
+  ]
+}
+</script>
 
-// Mobile menu
+<script>
+// ── NAVBAR SCROLL ──
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 40), {passive:true});
+
+// ── MOBILE MENU ──
 const ham = document.getElementById('ham');
 const mob = document.getElementById('mobMenu');
-ham.addEventListener('click', () => mob.classList.toggle('open'));
-function closeM(){ mob.classList.remove('open') }
-document.addEventListener('click', e => { if(!nav.contains(e.target) && !mob.contains(e.target)) mob.classList.remove('open') });
+ham.addEventListener('click', () => {
+  const isOpen = mob.classList.toggle('open');
+  ham.setAttribute('aria-expanded', isOpen.toString());
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+function closeM() {
+  mob.classList.remove('open');
+  ham.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+document.addEventListener('click', e => {
+  if (!nav.contains(e.target) && !mob.contains(e.target)) {
+    mob.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+});
 
-// FAQ accordion
+// ── FAQ ACCORDION ──
 document.querySelectorAll('.faq-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ── FADE-IN COM INTERSECTIONOBSERVER ──
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      fadeObserver.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// ── COUNT-UP NOS STATS DO HERO ──
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1400;
+  const start = performance.now();
+  const update = (now) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(ease * target) + (progress >= 1 ? suffix : '');
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const heroNums = document.querySelector('.hero-nums');
+if (heroNums) {
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        document.querySelectorAll('.count-up').forEach(el => animateCount(el));
+        countObs.disconnect();
+      }
+    });
+  }, {threshold: 0.5});
+  countObs.observe(heroNums);
+}
+
+// ── AVATARES DOS TESTEMUNHOS — cor única por nome ──
+function hashColor(str) {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) & 0xFFFF;
+  const hue = h % 360;
+  return {
+    bg: 'hsl(' + hue + ', 40%, 28%)',
+    border: 'hsl(' + hue + ', 60%, 45%)'
+  };
+}
+document.querySelectorAll('.test-av[data-name]').forEach(el => {
+  const c = hashColor(el.dataset.name);
+  el.style.background = c.bg;
+  el.style.borderColor = c.border;
+});
+
+// ── MOBILE CTA BAR — aparece ao rolar além do hero ──
+const mobCtaBar = document.getElementById('mobCtaBar');
+const heroSection = document.getElementById('heroSection');
+if (mobCtaBar && heroSection) {
+  const heroObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (window.innerWidth <= 640) {
+        if (!e.isIntersecting) {
+          mobCtaBar.classList.add('visible');
+        } else {
+          mobCtaBar.classList.remove('visible');
+        }
+      }
+    });
+  }, {threshold: 0});
+  heroObs.observe(heroSection);
+  // Re-avaliar no resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 640) mobCtaBar.classList.remove('visible');
+  }, {passive: true});
+}
+
+// ── EVENT TRACKING nos CTAs (ativa quando Analytics estiver configurado) ──
+document.querySelectorAll('[data-plan]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const plan = btn.dataset.plan;
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'begin_checkout', {currency:'BRL', items:[{item_name:'escola_da_fe_' + plan}]});
+    }
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout', {content_name:'Escola da Fé - ' + plan});
+    }
   });
 });
 </script>
